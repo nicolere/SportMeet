@@ -1,0 +1,53 @@
+<Page loaded="pageLoaded" class="page" actionBarHidden="true" xmlns="http://www.nativescript.org/tns.xsd">
+    <FlexboxLayout class="page">
+        <StackLayout class="form">
+        <AbsoluteLayout class ="connexion-top">
+            <Label class="title" text="{{title}}" />
+
+            <Label class="test" text="Bienvenue"/>
+        </AbsoluteLayout>
+            <!-- <WrapLayout>
+                <label text="" width="50" height="50" border-left="50" border-right="50" border-bottom="100" backgroundColor="blue"/>
+            </WrapLayout> -->
+        
+            <!-- <Image class="logo" src="~/images/logo.png" /> -->
+            <GridLayout rows="auto, auto, auto">
+                <StackLayout row="0" class="input-field">
+                    <label text="Login"/>
+                    <TextField class="input" text="{{ email }}" hint=""
+                        keyboardType="email" autocorrect="false"
+                        autocapitalizationType="none" returnKeyType="next" />
+                    <Label class="hr-light" />
+                </StackLayout>
+
+                <StackLayout row="1" class="input-field">
+                    <Label text="Password"/>
+                    <TextField id="password" class="input" text="{{ password }}"
+                        secure="true" returnKeyType="{{ isLoggingIn ? 'done' : 'next' }}" />
+                    <Label class="hr-light" />
+                </StackLayout>
+                
+                <StackLayout row="2" class="input-field" visibility="{{ !isLoggingIn ? 'visible' : 'collapse' }}">
+                    <Label text="Confirm password"/>
+                    <TextField id="confirmPassword" class="input" text="{{ confirmPassword }}"
+                        hint="" secure="true" returnKeyType="done" />
+                    <Label class="hr-light" />
+                </StackLayout>
+
+                <ActivityIndicator rowSpan="3" busy="{{ processing }}"></ActivityIndicator>
+            </GridLayout>
+
+            <Button text="{{ isLoggingIn ? 'Connexion' : 'S incrire' }}" tap="{{ submit }}" isEnabled="{{ !processing }}"
+                class="btn btn-primary m-t-20" />
+        </StackLayout>
+
+        <label text="Ou"/>
+
+        <Label class="login-label sign-up-label" tap="{{ toggleForm }}">
+            <FormattedString>
+                <Span text="{{ isLoggingIn ? 'Nouveau sur SportMeet ?' : 'Retour au Login' }}" />
+            </FormattedString>
+        </Label>
+    </FlexboxLayout>
+    
+</Page>

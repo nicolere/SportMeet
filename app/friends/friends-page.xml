@@ -1,0 +1,32 @@
+<Page loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd">
+	<ActionBar title="t">
+  		<!--<NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="{{onNavBtnTap}}"/> -->
+		<ActionItem icon="~/images/map.png" tap="{{ getToMap}}" />
+		<ActionItem icon="~/images/news.png" tap="{{ getToNews }}" />
+		<ActionItem icon="~/images/add_friend.jpg"/>
+		<ActionItem icon="~/images/loupe.png" tap="{{ deconnexion }}" />
+		<ActionItem icon="~/images/menu.jpg" tap="{{ getToMenu }}"/>
+		<!-- <ActionItem text="Test" icon="~/images/menu.jpg" tap="{{onNavBtnTap}}" android.position="popup"></ActionItem> -->
+	</ActionBar>
+
+	<FlexboxLayout class="page">
+        <AbsoluteLayout class ="connexion-top">
+        	<Label class="title" text="Mes amis" />
+			<TextField id="confirmPassword" type="search" class="searchBar" text="{{ confirmPassword }}"
+			hint="Nom" returnKeyType="done" />
+		</AbsoluteLayout>
+		<GridLayout columns="auto, *" rows="auto, 25" class="center">
+			<ListView items="{{friendList}}">
+                <ListView.itemTemplate>
+                    <label text="{{name}}" horizontalAlignment="left" verticalAlignment="center"/>
+                </ListView.itemTemplate>
+            </ListView>
+		</GridLayout>
+
+		<!--<Button text="toast" tap="{{ deconnexion }}"/> -->
+		<!--<label class="petitimage" src="~/images/deroulant.png" /> -->
+        <!--    <Label class="test" text="Bienvenue"/> -->
+		<!--<Image class="menu_deroulant" src="~/images/deroulant.png" />
+		<Image class="logo" src="~/images/carteGrenoble.png" /> -->
+	</FlexboxLayout>
+</Page>

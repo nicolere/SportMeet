@@ -1,0 +1,29 @@
+<Page loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd" backgroundImage="~/images/carteGrenoble.png">
+	<ActionBar title="la fdddg">
+  		<!--<NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="{{onNavBtnTap}}"/> -->
+		<ActionItem icon="~/images/map.png" />
+		<ActionItem icon="~/images/news.png" tap="{{ getToNews }}" />
+		<ActionItem icon="~/images/add_friend.jpg" tap="{{ getToFriends }}" />
+		<ActionItem icon="~/images/loupe.png" tap="{{ deconnexion }}" />
+		<ActionItem icon="~/images/menu.jpg" tap="{{ getToMenu }}"/>
+		<!-- <ActionItem text="Test" icon="~/images/menu.jpg" tap="{{onNavBtnTap}}" android.position="popup"></ActionItem> -->
+	</ActionBar>
+
+	<FlexboxLayout class="page" backgroundImage="~/images/carteGrenoble.png">
+        <AbsoluteLayout class ="connexion-top">
+        	<Label class="title" text="{{titre_page}}" />
+			<TextField id="confirmPassword" type="search" class="searchBar" text="{{ confirmPassword }}"
+			hint="Nom/Lieux/Événement" returnKeyType="done" />
+		</AbsoluteLayout>
+		<GridLayout columns="auto, *, auto" rows="auto, 25" class="center">
+			<Image src="~/images/deroulant.png" tap="deconnexion" rowSpan="2" height="50" width="50" margin="3" verticalAlignment="top"/>
+			<Label text="tesssst" icon="~/images/deroulant.png"/>
+		</GridLayout>
+
+		<!--<Button text="toast" tap="{{ deconnexion }}"/> -->
+		<!--<label class="petitimage" src="~/images/deroulant.png" /> -->
+        <!--    <Label class="test" text="Bienvenue"/> -->
+		<!--<Image class="menu_deroulant" src="~/images/deroulant.png" />
+		<Image class="logo" src="~/images/carteGrenoble.png" /> -->
+	</FlexboxLayout>
+</Page>
