@@ -11,7 +11,7 @@
             </WrapLayout> -->
         
             <!-- <Image class="logo" src="~/images/logo.png" /> -->
-            <GridLayout rows="auto, auto, auto">
+            <GridLayout rows="auto, auto, auto, auto, auto,auto,auto">
                 <StackLayout row="0" class="input-field">
                     <label text="Login"/>
                     <TextField class="input" text="{{ email }}" hint=""
@@ -28,8 +28,34 @@
                 </StackLayout>
                 
                 <StackLayout row="2" class="input-field" visibility="{{ !isLoggingIn ? 'visible' : 'collapse' }}">
-                    <Label text="Confirm password"/>
+                    <Label text="Confirmer votre mot de passe"/>
                     <TextField id="confirmPassword" class="input" text="{{ confirmPassword }}"
+                        hint="" secure="true" returnKeyType="done" />
+                    <Label class="hr-light" />
+                </StackLayout>
+
+                <StackLayout row="3" class="input-field" visibility="{{ !isLoggingIn ? 'visible' : 'collapse' }}">
+                    <Label text="Entrer votre nom"/>
+                    <TextField id="Name" class="input" text="{{ surname }}"
+                        hint="" secure="true" returnKeyType="done" />
+                    <Label class="hr-light" />
+                </StackLayout>
+
+                <StackLayout row="4" class="input-field" visibility="{{ !isLoggingIn ? 'visible' : 'collapse' }}">
+                    <Label text="Entrer votre prénom"/>
+                    <TextField id="Name" class="input" text="{{ name }}"
+                        hint="" secure="true" returnKeyType="done" />
+                    <Label class="hr-light" />
+                </StackLayout>
+                <StackLayout row="5" class="input-field" visibility="{{ !isLoggingIn ? 'visible' : 'collapse' }}">
+                    <Label text="Entrer votre prénom"/>
+                    <TextField id="Name" class="input" text="{{ name }}"
+                        hint="" secure="true" returnKeyType="done" />
+                    <Label class="hr-light" />
+                </StackLayout>
+                <StackLayout row="6" class="input-field" visibility="{{ !isLoggingIn ? 'visible' : 'collapse' }}">
+                    <Label text="Entrer votre prénom"/>
+                    <TextField id="Name" class="input" text="{{ name }}"
                         hint="" secure="true" returnKeyType="done" />
                     <Label class="hr-light" />
                 </StackLayout>

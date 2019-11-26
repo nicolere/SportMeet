@@ -9,6 +9,8 @@ function LoginViewModel() {
         email: "user@nativescript.org",
         password: "password",
         confirmPassword: "",
+        surname:"",
+        name:"",
         isLoggingIn: true,
         processing: false,
         title: "SportMeet",
