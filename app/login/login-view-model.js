@@ -1,22 +1,27 @@
 const observableModule = require("tns-core-modules/data/observable");
 const dialogsModule = require("tns-core-modules/ui/dialogs");
 const topmost = require("tns-core-modules/ui/frame").topmost;
+const DatePicker = require("tns-core-modules/ui/date-picker").DatePicker;
 
 const userService = require("~/services/user-service");
 
 function LoginViewModel() {
+
     const viewModel = observableModule.fromObject({
         email: "user@nativescript.org",
         password: "password",
         confirmPassword: "",
         surname:"",
         name:"",
+        title: "SportMeet",
+        date:"",
+        Genre : ["Homme","Femme"],
         isLoggingIn: true,
         processing: false,
-        title: "SportMeet",
 
         //Lorsque l'on passe dans la phase d'inscription et vice versa
         toggleForm() {
+            console.log("Test Toggle");
             this.isLoggingIn = !this.isLoggingIn;
         },
 

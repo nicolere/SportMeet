@@ -1,4 +1,5 @@
 <Page loaded="pageLoaded" class="page" actionBarHidden="true" xmlns="http://www.nativescript.org/tns.xsd">
+<ScrollView>
     <FlexboxLayout class="page">
         <StackLayout class="form">
         <AbsoluteLayout class ="connexion-top">
@@ -11,7 +12,8 @@
             </WrapLayout> -->
         
             <!-- <Image class="logo" src="~/images/logo.png" /> -->
-            <GridLayout rows="auto, auto, auto, auto, auto,auto,auto">
+            
+            <GridLayout rows="auto, auto, auto, auto, auto,auto,auto, auto" col="50 ,50" >
                 <StackLayout row="0" class="input-field">
                     <label text="Login"/>
                     <TextField class="input" text="{{ email }}" hint=""
@@ -35,33 +37,31 @@
                 </StackLayout>
 
                 <StackLayout row="3" class="input-field" visibility="{{ !isLoggingIn ? 'visible' : 'collapse' }}">
-                    <Label text="Entrer votre nom"/>
-                    <TextField id="Name" class="input" text="{{ surname }}"
-                        hint="" secure="true" returnKeyType="done" />
+                    <Label text="Entrez notre nom"/>
+                    <TextField id="surname" class="input" text="{{ surname }}"
+                        hint="" returnKeyType="done" />
                     <Label class="hr-light" />
                 </StackLayout>
 
                 <StackLayout row="4" class="input-field" visibility="{{ !isLoggingIn ? 'visible' : 'collapse' }}">
-                    <Label text="Entrer votre prénom"/>
-                    <TextField id="Name" class="input" text="{{ name }}"
-                        hint="" secure="true" returnKeyType="done" />
+                    <Label text="Entrez notre prénom"/>
+                    <TextField id="name" class="input" text="{{ name }}"
+                        hint="" returnKeyType="done" />
                     <Label class="hr-light" />
-                </StackLayout>
-                <StackLayout row="5" class="input-field" visibility="{{ !isLoggingIn ? 'visible' : 'collapse' }}">
-                    <Label text="Entrer votre prénom"/>
-                    <TextField id="Name" class="input" text="{{ name }}"
-                        hint="" secure="true" returnKeyType="done" />
-                    <Label class="hr-light" />
-                </StackLayout>
-                <StackLayout row="6" class="input-field" visibility="{{ !isLoggingIn ? 'visible' : 'collapse' }}">
-                    <Label text="Entrer votre prénom"/>
-                    <TextField id="Name" class="input" text="{{ name }}"
-                        hint="" secure="true" returnKeyType="done" />
-                    <Label class="hr-light" />
-                </StackLayout>
+                </StackLayout> 
+
 
                 <ActivityIndicator rowSpan="3" busy="{{ processing }}"></ActivityIndicator>
+
             </GridLayout>
+
+            
+              <GridLayout columns="110 , auto" rows="auto, auto" visibility="{{ !isLoggingIn ? 'visible' : 'collapse' }}">
+
+                <ListPicker row="0" col="0" class="input-field" items="{{ Genre }}" selectedIndex="0" loaded="onListPickerLoaded" />
+                <DatePicker row="0" col="1" colSpan="2" loaded="onDatePickerLoaded" date="{{ date }}"></DatePicker>
+  </GridLayout>
+            
 
             <Button text="{{ isLoggingIn ? 'Connexion' : 'S incrire' }}" tap="{{ submit }}" isEnabled="{{ !processing }}"
                 class="btn btn-primary m-t-20" />
@@ -75,5 +75,6 @@
             </FormattedString>
         </Label>
     </FlexboxLayout>
+    </ScrollView>
     
 </Page>
