@@ -6,6 +6,7 @@ function HomeViewModel() {
   const viewModel = observableModule.fromObject({
     message: "You have successfully authenticated. This is where you build your core application functionality.",
     titre_page: "Carte du sport",
+    name:"Edouard",
     deconnexion()
     {
       console.log("deco");

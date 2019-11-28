@@ -11,7 +11,7 @@ function LoginViewModel() {
         email: "user@nativescript.org",
         password: "password",
         confirmPassword: "",
-        surname:"",
+        surname:"DELATTRE",
         name:"",
         title: "SportMeet",
         date:"",
