@@ -13,10 +13,10 @@
         <AbsoluteLayout class ="connexion-top">
         	<Label class="title" text="Paramètre" />
 		</AbsoluteLayout>
-            <GridLayout columns="65 , 5*" rows="31,31,31,31,31,31,31,31,31,31,31,31,31,31" visibility="{{ !isLoggingIn ? 'visible' : 'collapse' }}">
-				<Image row="0" col="0" class="GridCenter" rowSpan="2" colSpan="1" height="100%" width="100%" src="~/images/profil.png"/>
-				<label row="0" col="1" class="GridCenter" text="Modifier votre profil"/>
-				<label row="1" col="1" class="GridCenter" text="{{name}}"/>
+            <GridLayout columns="65 , 5*" rows="31,31,31,31,31,31,31,31,31,31,31,31,31,31">
+				<Image row="0" col="0" class="GridCenter" rowSpan="2" colSpan="1" tap="{{ getToProfil }}" height="100%" width="100%" src="~/images/profil.png"/>
+				<label row="0" col="1" class="GridCenter" tap="{{ getToProfil }}" text="Modifier votre profil"/>
+				<label row="1" col="1" class="GridCenter" tap="{{ getToProfil }}" text="{{name}}"/>
 
 				<Image row="2" col="0" class="GridCenter" rowSpan="2" colSpan="1" height="100%" width="100%" src="~/images/groupe.png"/>
 				<label row="2" col="1" class="textCenter" rowSpan="2" text="Groupe"/>

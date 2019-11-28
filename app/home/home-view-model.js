@@ -57,6 +57,15 @@ function HomeViewModel() {
       });
     },
 
+    getToProfil()
+    {
+      this.set("processing", false);
+      topmost().navigate({
+        moduleName: "profil/profil-page",
+        clearHistory: true
+      });
+    },
+
   });
   return viewModel;  
 }
