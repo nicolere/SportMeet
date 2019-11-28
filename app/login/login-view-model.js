@@ -18,6 +18,7 @@ function LoginViewModel() {
         date:"",
         Genre : ["Homme","Femme"],
         isLoggingIn: true,
+        isMyProfilModif: true,
         processing: false,
 
         //Lorsque l'on passe dans la phase d'inscription et vice versa

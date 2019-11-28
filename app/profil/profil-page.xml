@@ -16,8 +16,11 @@
 				<Image row="0" col="0" class="GridCenter" rowSpan="3" colSpan="1" width="100%" src="~/images/profil.png"/>
 
 				<label row="0" col="1" class="GridCenter" text="{{surname}}"/>
-				<label row="1" col="1" class="GridCenter" text="{{age}}" textWrap="true"/>
-				<Button row="2" col="1" text="Modifier votre profil" class="buttonEdit" />
+				<StackLayout orientation="horizontal" row="1" col="1">
+					<label text="{{age}}" class="GridCenter" textWrap="true"/>
+					<label text=" ans" class="GridCenter" textWrap="true"/>
+				</StackLayout>
+				<Button row="2" col="1" text="Modifier votre profil" tap="" class="buttonEdit" visibility="{{ isMyProfilModif ? 'visible' : 'collapse' }}" />
 			</GridLayout>
 		</AbsoluteLayout>
 

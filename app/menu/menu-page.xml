@@ -33,8 +33,8 @@
 				<Image row="10" col="0" class="GridCenter" rowSpan="2" colSpan="1" height="100%" width="100%" src="~/images/interrogation.png"/>
 				<label row="10" col="1" class="textCenter" rowSpan="2" text="Aide et assistance"/>
 
-				<Image row="12" col="0" class="GridCenter" rowSpan="2" colSpan="1" height="100%" width="100%" src="~/images/deconnexion.png"/>
-				<label row="12" col="1" class="textCenter" rowSpan="2" text="Déconnexion"/>
+				<Image row="12" col="0" class="GridCenter" rowSpan="2" tap="{{deconnexion}}" colSpan="1" height="100%" width="100%" src="~/images/deconnexion.png"/>
+				<label row="12" col="1" class="textCenter" rowSpan="2" tap="{{deconnexion}}" text="Déconnexion"/>
 
         	</GridLayout>
 	</FlexboxLayout>
