@@ -96,8 +96,13 @@ ActionBar {
 
 .GridCenter
 {
-    margin-top: 8;
-    
+    margin-top: 8; 
+}
+
+.Name
+{
+  margin-top: 11;
+  font-size: 15;
 }
 
 .activityTitle
