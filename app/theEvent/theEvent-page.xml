@@ -15,9 +15,9 @@
 
 				<Image row="0" col="0" class="GridCenter" rowSpan="3" colSpan="1" width="100%" src="~/images/football.png"/>
 
-				<label row="0" col="1" class="Name" text="Nom événement"/>
-				<label row="1" col="1" class="Name" text="Date événement"/>
-                <HtmlView row="2" col="1" html="<a href='https://example.com'>Redirection vers le site</a></li>"></HtmlView>
+				<label row="0" col="1" class="Name" text="13ème foulée parisienne"/>
+				<label row="1" col="1" class="Name" text="le 13 décembre 2019"/>
+                <HtmlView row="2" col="1" html="<a href='https://example.com'>Redirection vers le site officiel</a></li>"></HtmlView>
 			</GridLayout>
 		</AbsoluteLayout>
 

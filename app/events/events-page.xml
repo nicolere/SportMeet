@@ -21,8 +21,8 @@
 			<StackLayout orientation="horizontal" width="100%">
 				<Image src="~/images/football.png" tap="{{getToTheEvent}}" width="50"/>
 					<StackLayout orientation="vertical" width="70%" margin-top="75px">
-						<Label class="GridCenter" tap="{{getToTheEvent}}" text="La date"/>
-						<label class="Bold" text="Le titre"/>
+						<Label class="GridCenter" tap="{{getToTheEvent}}" text="13 foulée parisienne"/>
+						<label class="Bold" text="le 13 décembre 2019"/>
 					</StackLayout>
 				<Image src="~/images/deconnexion.png" height="50" width="50"/>
 			</StackLayout>
