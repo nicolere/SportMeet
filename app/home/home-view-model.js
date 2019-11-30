@@ -1,12 +1,14 @@
 const observableModule = require("data/observable");
 const dialogsModule = require("ui/dialogs");
 const topmost = require("tns-core-modules/ui/frame").topmost;
+const HtmlView = require("tns-core-modules/ui/html-view").HtmlView;
 
 function HomeViewModel() {
   const viewModel = observableModule.fromObject({
     message: "You have successfully authenticated. This is where you build your core application functionality.",
     titre_page: "Carte du sport",
     name:"Edouard",
+    myHtmlView: "<span><h1><font color=\"blue\">NativeScript HtmlView</font></h1></br><h3>This component accept simple HTML strings</h3></span>",
     deconnexion()
     {
       console.log("deco");
@@ -57,6 +59,15 @@ function HomeViewModel() {
       });
     },
 
+    getToTheEvent()
+    {
+      this.set("processing", false);
+      topmost().navigate({
+        moduleName: "theEvent/theEvent-page",
+        clearHistory: true
+      });
+    },
+
     getToProfil()
     {
       this.set("processing", false);
@@ -74,8 +85,9 @@ function HomeViewModel() {
         clearHistory: true
       });
     },
-
+    
   });
+  
   return viewModel;  
 }
 

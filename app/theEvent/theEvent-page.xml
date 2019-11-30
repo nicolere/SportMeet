@@ -1,0 +1,57 @@
+<Page loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd">
+	<ActionBar>
+  		<!--<NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="{{onNavBtnTap}}"/> -->
+		<ActionItem icon="~/images/map.png" tap="{{getToMap}}"/>
+		<ActionItem icon="~/images/news.png" tap="{{ getToNews }}" />
+		<ActionItem icon="~/images/add_friend.jpg" tap="{{ getToFriends }}" />
+		<ActionItem icon="~/images/loupe.png" tap="{{ deconnexion }}" />
+		<ActionItem icon="~/images/menu.jpg" />
+		<!-- <ActionItem text="Test" icon="~/images/menu.jpg" tap="{{onNavBtnTap}}" android.position="popup"></ActionItem> -->
+	</ActionBar>
+    <ScrollView>
+	<FlexboxLayout class="page">
+        <AbsoluteLayout class ="connexion-top">
+			<GridLayout columns="160 , 5*" rows="auto,auto,auto">
+
+				<Image row="0" col="0" class="GridCenter" rowSpan="3" colSpan="1" width="100%" src="~/images/football.png"/>
+
+				<label row="0" col="1" class="Name" text="Nom événement"/>
+				<label row="1" col="1" class="Name" text="Date événement"/>
+                <HtmlView row="2" col="1" html="<a href='https://example.com'>Redirection vers le site</a></li>"></HtmlView>
+			</GridLayout>
+		</AbsoluteLayout>
+
+		<StackLayout class="hr-dark"></StackLayout>
+
+        <StackLayout orientation="horizontal" width="100%" height="auto">
+				<HtmlView  html="<p>ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? vers le site</p>"></HtmlView>
+	    </StackLayout>
+
+        <StackLayout class="hr-dark"></StackLayout>
+
+    <GridLayout rows="auto">
+        <ScrollView row="1" orientation="horizontal">
+            <StackLayout orientation="horizontal">
+            <StackLayout style="color: white; margin: 10; font-size: 13;" class="text-center">
+                <Image src="~/images/testEvenement2.png" height="100%" margin="5"></Image>
+            </StackLayout>  
+            <StackLayout style="color: white; margin: 10; font-size: 13;" class="text-center">
+                <Image src="~/images/testEvenement1.png" height="100%" margin="5"></Image>
+            </StackLayout>
+            <StackLayout style="color: white; margin: 10; font-size: 13;" class="text-center">
+                <Image src="~/images/testEvenement1.png" height="100%" margin="5"></Image>
+            </StackLayout>
+            <StackLayout style="color: white; margin: 10; font-size: 13;" class="text-center">
+                <Image src="~/images/testEvenement1.png" height="100%" margin="5"></Image>
+            </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </GridLayout>
+    
+    
+    
+    
+    </FlexboxLayout>
+
+    </ScrollView>
+</Page>

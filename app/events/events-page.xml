@@ -19,17 +19,17 @@
 
 		<StackLayout orientation="vertical" width="100%" height="auto" margin-top="75px">
 			<StackLayout orientation="horizontal" width="100%">
-				<Image src="~/images/football.png" tap="deconnexion" width="50"/>
+				<Image src="~/images/football.png" tap="{{getToTheEvent}}" width="50"/>
 					<StackLayout orientation="vertical" width="70%" margin-top="75px">
-						<Label class="GridCenter" text="La date"/>
+						<Label class="GridCenter" tap="{{getToTheEvent}}" text="La date"/>
 						<label class="Bold" text="Le titre"/>
 					</StackLayout>
-				<Image src="~/images/deconnexion.png" tap="deconnexion" height="50" width="50"/>
+				<Image src="~/images/deconnexion.png" height="50" width="50"/>
 			</StackLayout>
 			<StackLayout class="hr-dark m-5"></StackLayout>
 
 			<StackLayout orientation="horizontal" width="100%">
-				<Image src="~/images/football.png" tap="deconnexion" width="50"/>
+				<Image src="~/images/football.png" width="50"/>
 					<StackLayout orientation="vertical" width="70%" height="auto" margin-top="75px">
 						<Label class="GridCenter" text="La date"/>
 						<label class="Bold" text="Le titre"/>
