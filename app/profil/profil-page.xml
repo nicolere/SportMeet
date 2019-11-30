@@ -1,7 +1,7 @@
 <Page loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd">
 	<ActionBar>
   		<!--<NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="{{onNavBtnTap}}"/> -->
-		<ActionItem icon="~/images/map.png" />
+		<ActionItem icon="~/images/map.png" tap="{{getToMap}}"/>
 		<ActionItem icon="~/images/news.png" tap="{{ getToNews }}" />
 		<ActionItem icon="~/images/add_friend.jpg" tap="{{ getToFriends }}" />
 		<ActionItem icon="~/images/loupe.png" tap="{{ deconnexion }}" />

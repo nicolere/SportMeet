@@ -1,7 +1,7 @@
 <Page loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd">
 	<ActionBar>
   		<!--<NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="{{onNavBtnTap}}"/> -->
-		<ActionItem icon="~/images/map.png" />
+		<ActionItem icon="~/images/map.png" tap="{{getToMap}}"/>
 		<ActionItem icon="~/images/news.png" tap="{{ getToNews }}" />
 		<ActionItem icon="~/images/add_friend.jpg" tap="{{ getToFriends }}" />
 		<ActionItem icon="~/images/loupe.png" tap="{{ deconnexion }}" />
@@ -21,8 +21,8 @@
 				<Image row="2" col="0" class="GridCenter" rowSpan="2" colSpan="1" height="100%" width="100%" src="~/images/groupe.png"/>
 				<label row="2" col="1" class="textCenter" rowSpan="2" text="Groupe"/>
 
-				<Image row="4" col="0" class="GridCenter" rowSpan="2" colSpan="1" height="100%" width="100%" src="~/images/events.png"/>
-				<label row="4" col="1" class="textCenter" rowSpan="2" text="Événements"/>
+				<Image row="4" col="0" class="GridCenter" tap="{{getToEvents}}" rowSpan="2" colSpan="1" height="100%" width="100%" src="~/images/events.png"/>
+				<label row="4" col="1" class="textCenter" tap="{{getToEvents}}" rowSpan="2" text="Événements"/>
 
 				<Image row="6" col="0" class="GridCenter" rowSpan="2" colSpan="1" height="100%" width="100%" src="~/images/add_friend.png"/>
 				<label row="6" col="1" class="textCenter" rowSpan="2" text="Retrouver des amis"/>

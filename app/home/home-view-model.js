@@ -66,6 +66,15 @@ function HomeViewModel() {
       });
     },
 
+    getToEvents()
+    {
+      this.set("processing", false);
+      topmost().navigate({
+        moduleName: "events/events-page",
+        clearHistory: true
+      });
+    },
+
   });
   return viewModel;  
 }
