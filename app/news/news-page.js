@@ -1,7 +1,9 @@
-const HomeViewModel = require("../home/home-view-model");
-const homeViewModel = new HomeViewModel();
+var newsViewModel = require('./news-view-model').newsViewModel;
 
-exports.pageLoaded = function(args) {
-  const page = args.object;
-  page.bindingContext = homeViewModel;
+function pageLoaded(args) {
+  var page = args.object;
+
+  page.bindingContext = newsViewModel(page);
 }
+
+exports.pageLoaded = pageLoaded;
