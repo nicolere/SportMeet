@@ -1,63 +1,64 @@
-const observableModule = require("data/observable");
-const dialogsModule = require("ui/dialogs");
+const observableModule = require("tns-core-modules/data/observable").Observable;
 const topmost = require("tns-core-modules/ui/frame").topmost;
 
-function HomeViewModel() {
-  const viewModel = observableModule.fromObject({
-    message: "You have successfully authenticated. This is where you build your core application functionality.",
-    titre_page: "Carte du sport",
-    deconnexion()
-    {
-      console.log("deco");
-      this.set("processing", false);
-      topmost().navigate({
-        moduleName: "login/login-page",
-        clearHistory: true
-      });
-    },
+const viewModel = new observableModule();
 
-    getToNews()
-    {
-      console.log("Je veux les news");
-      this.set("processing", false);
-      topmost().navigate({
-        moduleName: "news/news-page",
-        clearHistory: true
-      });
-    },
+let HViewModel = page => {
+    viewModel.set("mainColor", "#1aa3ff");
+    viewModel.set("titre_page", "Carte du sport");
+    return viewModel;
+};
 
-    getToFriends()
-    {
-      console.log("Je veux les amis");
-      this.set("processing", false);
-      topmost().navigate({
-        moduleName: "friends/friends-page",
-        clearHistory: true
-      });
-    },
-
-    getToMap()
-    {
-      console.log("Je veux les amis");
-      this.set("processing", false);
-      topmost().navigate({
-        moduleName: "home/home-page",
-        clearHistory: true
-      });
-    },
-
-    getToMenu()
-    {
-      console.log("Je veux les amis");
-      this.set("processing", false);
-      topmost().navigate({
+viewModel.goToMenu = args => {
+    // console.log("Navigate vers Menu");
+    topmost().navigate({
         moduleName: "menu/menu-page",
         clearHistory: true
-      });
-    },
+    });
+};
 
-  });
-  return viewModel;  
-}
+viewModel.deconnexion = args => {
+    // console.log("Déconnexion");
+    topmost().navigate({
+        moduleName: "login/login-page",
+        clearHistory: true
+    });
+};
 
-module.exports = HomeViewModel;
+viewModel.goToMap = args => {
+    // console.log("Navigate vers Map");
+    topmost().navigate({
+        moduleName: "home/home-page",
+        clearHistory: true,
+        animated: true
+    });
+};
+
+viewModel.goToNews = args => {
+    // console.log("Navigate vers News");
+    topmost().navigate({
+        moduleName: "news/news-page",
+        clearHistory: true,
+        animated: true
+    });
+};
+
+viewModel.goToFriends = args => {
+    // console.log("Navigate vers Friends");
+    topmost().navigate({
+        moduleName: "friends/friends-page",
+        clearHistory: true,
+        animated: true
+    });
+};
+
+viewModel.goToEvents = args => {
+    // console.log("Navigate vers Events")
+    topmost().navigate({
+        moduleName: "events/events-page",
+        clearHistory: true,
+        animated: true
+    });
+};
+
+exports.HViewModel = HViewModel;
