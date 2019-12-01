@@ -1,0 +1,37 @@
+<Page loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd" >
+    <ActionBar title="SportMeet">
+		<NavigationButton icon="res://menu" tap="{{ goToMenu }}"/>
+		<ActionItem tap="{{ deconnexion }}" text="Déconnexion" android.position="popup" />
+	</ActionBar>
+
+    <DockLayout>
+        <StackLayout dock="top" height="90%" width="100%" style="">
+		<!-- Main Content -->
+		</StackLayout>
+
+        <!-- Barre de navigation -->
+		<StackLayout dock="bottom" height="10%" style="border-color:#E4E4E4;border-width:1;background:#fff;">
+			<StackLayout orientation="horizontal">
+				<!-- Item 1 Navigation -->
+				<StackLayout class="navItem" tap="{{ goToMap }}">
+					<Label text="&#xf5a0;" android:style="font-size:25;margin-top:15" class="fas"/>
+				</StackLayout>
+				<!-- Item 2 Navigation -->
+				<StackLayout class="navItem" tap="{{ goToNews }}">
+					<Label text="&#xf1ea;" android:style="font-size:25;margin-top:15" class="fas"/>
+				</StackLayout>
+				<!-- Item 3 Navigation -->
+				<StackLayout class="navItem" tap="{{ goToFriends }}">
+					<Label text="&#xf500;" android:style="font-size:25;margin-top:15" class="fas"/>
+				</StackLayout>
+				<!-- Item 4 Navigation -->
+				<StackLayout class="navItem" tap="{{ goToEvents }}">
+					<Label text="&#xf784;" color="{{ eventsColor }}" android:style="font-size:25;margin-top:15" class="fas"/>
+				</StackLayout>
+			</StackLayout>
+		</StackLayout>
+    </DockLayout>
+
+
+
+</Page>
