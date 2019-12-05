@@ -1,12 +1,17 @@
 <Page loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd">
-	<ActionBar title="SportMeet" tap="{{ goToMap }}">
-		<NavigationButton icon="res://menu" tap="{{ goToMenu }}"/>
-		<ActionItem tap="{{ deconnexion }}" text="Déconnexion" android.position="popup" />
+	<ActionBar>
+  		<!--<NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="{{onNavBtnTap}}"/> -->
+		<ActionItem icon="~/images/map.png" tap="{{getToMap}}"/>
+		<ActionItem icon="~/images/news.png" tap="{{ getToNews }}" />
+		<ActionItem icon="~/images/add_friend.jpg" tap="{{ getToFriends }}" />
+		<ActionItem icon="~/images/loupe.png" tap="{{ deconnexion }}" />
+		<ActionItem icon="~/images/menu.jpg" />
+		<!-- <ActionItem text="Test" icon="~/images/menu.jpg" tap="{{onNavBtnTap}}" android.position="popup"></ActionItem> -->
 	</ActionBar>
 
 	<FlexboxLayout class="page">
         <AbsoluteLayout class ="connexion-top">
-        	<Label class="title" text="{{ titreView }}" />
+        	<Label class="title" text="Paramètre" />
 		</AbsoluteLayout>
             <GridLayout columns="65 , 5*" rows="31,31,31,31,31,31,31,31,31,31,31,31,31,31">
 				<Image row="0" col="0" class="GridCenter" rowSpan="2" colSpan="1" tap="{{ getToProfil }}" height="100%" width="100%" src="~/images/profil.png"/>
@@ -16,11 +21,11 @@
 				<Image row="2" col="0" class="GridCenter" rowSpan="2" colSpan="1" height="100%" width="100%" src="~/images/groupe.png"/>
 				<label row="2" col="1" class="textCenter" rowSpan="2" text="Groupe"/>
 
-				<Image row="4" col="0" class="GridCenter" tap="{{goToEvents}}" rowSpan="2" colSpan="1" height="100%" width="100%" src="~/images/events.png"/>
-				<label row="4" col="1" class="textCenter" tap="{{goToEvents}}" rowSpan="2" text="Événements"/>
+				<Image row="4" col="0" class="GridCenter" tap="{{getToEvents}}" rowSpan="2" colSpan="1" height="100%" width="100%" src="~/images/events.png"/>
+				<label row="4" col="1" class="textCenter" tap="{{getToEvents}}" rowSpan="2" text="Événements"/>
 
-				<Image row="6" col="0" class="GridCenter" tap="{{goToFriends}}" rowSpan="2" colSpan="1" height="100%" width="100%" src="~/images/add_friend.png"/>
-				<label row="6" col="1" class="textCenter" tap="{{goToFriends}}" rowSpan="2" text="Retrouver des amis"/>
+				<Image row="6" col="0" class="GridCenter" rowSpan="2" colSpan="1" height="100%" width="100%" src="~/images/add_friend.png"/>
+				<label row="6" col="1" class="textCenter" rowSpan="2" text="Retrouver des amis"/>
 
 				<Image row="8" col="0" class="GridCenter" rowSpan="2" colSpan="1" height="100%" width="100%" src="~/images/paramètres.png"/>
 				<label row="8" col="1" class="textCenter" rowSpan="2" text="Paramètres de l'application"/>

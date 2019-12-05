@@ -1,5 +1,5 @@
 <Page loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd" >
-	<ActionBar title="SportMeet" tap="{{ goToMap }}">
+	<ActionBar title="SportMeet">
 		<NavigationButton icon="res://menu" tap="{{ goToMenu }}"/>
 		<ActionItem tap="{{ deconnexion }}" text="Déconnexion" android.position="popup" />
 	</ActionBar>

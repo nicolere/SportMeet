@@ -53,15 +53,6 @@ viewModel.goToFriends = args => {
     });
 };
 
-viewModel.goToEvents = args => {
-    // console.log("Navigate vers Friends");
-    topmost().navigate({
-        moduleName: "events/events-page",
-        clearHistory: true,
-        animated: true
-    });
-};
-
 viewModel.getToTheEvent = args => {
     // console.log("Navigate vers the Event")
     topmost().navigate({
