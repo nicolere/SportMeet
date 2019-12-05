@@ -1,0 +1,58 @@
+<Page loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd">
+	<ActionBar>
+  		<!--<NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="{{onNavBtnTap}}"/> -->
+		<ActionItem icon="~/images/map.png" tap="{{getToMap}}"/>
+		<ActionItem icon="~/images/news.png" tap="{{ getToNews }}" />
+		<ActionItem icon="~/images/add_friend.jpg" tap="{{ getToFriends }}" />
+		<ActionItem icon="~/images/loupe.png" tap="{{ deconnexion }}" />
+		<ActionItem icon="~/images/menu.jpg" />
+		<!-- <ActionItem text="Test" icon="~/images/menu.jpg" tap="{{onNavBtnTap}}" android.position="popup"></ActionItem> -->
+	</ActionBar>
+
+	<FlexboxLayout class="page">
+        <AbsoluteLayout class ="connexion-top">
+			<GridLayout columns="160 , 5*" rows="30,25,100">
+
+				<Image row="0" col="0" class="GridCenter" rowSpan="3" colSpan="1" width="100%" src="~/images/profil.png"/>
+
+				<label row="0" col="1" class="Name" text="{{surname}}"/>
+				<StackLayout orientation="horizontal" row="1" col="1">
+					<label text="{{age}}" class="GridCenter" textWrap="true"/>
+					<label text=" ans" class="GridCenter" textWrap="true"/>
+				</StackLayout>
+				<Button row="2" col="1" text="Modifier votre profil" tap="" class="buttonEdit" visibility="{{ isMyProfilModif ? 'visible' : 'collapse' }}" />
+			</GridLayout>
+		</AbsoluteLayout>
+
+		<GridLayout columns="5* ,1, 5*" rows="50,50">
+
+				<label row="0" col="0" class="middleBarCenter" text="Expérience: " />
+				<label row="2" col="0" class="middleBarCenter" text="Moins d'une heure"/>
+
+				<label row="0" col="1" text="test" backgroundColor="black" />
+				<label row="2" col="1" text="test" backgroundColor="black" />
+
+				<label row="0" col="2" class="middleBarCenter" text="Sport préféré: " />
+				<label row="2" col="2" class="middleBarCenter" text="Football"/>
+		</GridLayout>
+
+		<StackLayout class="hr-dark"></StackLayout>
+
+		<GridLayout columns="1* , 1*" rows="50,50,50,50">
+
+				<label row="0" col="0" class="activityTitle" text="Football :"/>
+				<label row="1" col="0" class="activity" text="Niveau confirmé"/>
+
+				<label row="0" col="1" class="activityTitle" text="Pétanque :"/>
+				<label row="1" col="1" class="activity" text="Niveau professionnel"/>
+
+				<label row="2" col="0" class="activityTitle" text="Course à pied :"/>
+				<label row="3" col="0" class="activity" text="Niveau amateur"/>
+
+				<label row="2" col="1" class="activityTitle" text="Natation :"/>
+				<label row="3" col="1" class="activity" text="Enclume"/>
+
+			</GridLayout>
+
+	</FlexboxLayout>
+</Page>

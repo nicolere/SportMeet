@@ -1,5 +1,6 @@
 const observableModule = require("tns-core-modules/data/observable").Observable;
 const topmost = require("tns-core-modules/ui/frame").topmost;
+const HtmlView = require("tns-core-modules/ui/html-view").HtmlView;
 
 const viewModel = new observableModule();
 
@@ -52,10 +53,19 @@ viewModel.goToFriends = args => {
     });
 };
 
-viewModel.goToEvents = args => {
-    // console.log("Navigate vers Events")
+viewModel.getToTheEvent = args => {
+    // console.log("Navigate vers the Event")
     topmost().navigate({
-        moduleName: "events/events-page",
+        moduleName: "theEvent/theEvent-page",
+        clearHistory: true,
+        animated: true
+    });
+};
+
+viewModel.getToProfil = args => {
+    // console.log("Navigate vers the Event")
+    topmost().navigate({
+        moduleName: "profil/profil-page",
         clearHistory: true,
         animated: true
     });

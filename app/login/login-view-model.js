@@ -11,12 +11,14 @@ function LoginViewModel() {
         email: "user@nativescript.org",
         password: "password",
         confirmPassword: "",
-        surname:"",
+        surname:"DELATTRE Edouard",
+        age:22,
         name:"",
         title: "SportMeet",
         date:"",
         Genre : ["Homme","Femme"],
         isLoggingIn: true,
+        isMyProfilModif: true,
         processing: false,
 
         //Lorsque l'on passe dans la phase d'inscription et vice versa
