@@ -1,12 +1,11 @@
-const observableModule = require("tns-core-modules/data/observable").Observable;
+var observableModule = require("tns-core-modules/data/observable").Observable;
 const topmost = require("tns-core-modules/ui/frame").topmost;
-const HtmlView = require("tns-core-modules/ui/html-view").HtmlView;
 
 const viewModel = new observableModule();
 
-let HViewModel = page => {
-    viewModel.set("mainColor", "#1aa3ff");
-    viewModel.set("titre_page", "Carte du sport");
+let menuViewModel = page => {
+    viewModel.set('titreView',"Paramètres");
+
     return viewModel;
 };
 
@@ -35,15 +34,6 @@ viewModel.goToMap = args => {
     });
 };
 
-viewModel.goToNews = args => {
-    // console.log("Navigate vers News");
-    topmost().navigate({
-        moduleName: "news/news-page",
-        clearHistory: true,
-        animated: true
-    });
-};
-
 viewModel.goToFriends = args => {
     // console.log("Navigate vers Friends");
     topmost().navigate({
@@ -54,7 +44,7 @@ viewModel.goToFriends = args => {
 };
 
 viewModel.goToEvents = args => {
-    // console.log("Navigate vers Friends");
+    // console.log("Navigate vers Events")
     topmost().navigate({
         moduleName: "events/events-page",
         clearHistory: true,
@@ -80,4 +70,4 @@ viewModel.getToProfil = args => {
     });
 };
 
-exports.HViewModel = HViewModel;
+exports.menuViewModel = menuViewModel;

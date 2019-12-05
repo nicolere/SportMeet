@@ -1,5 +1,5 @@
-const HomeViewModel = require("../login/login-view-model");
-const homeViewModel = new HomeViewModel();
+var HomeViewModel = require("../login/login-view-model");
+var homeViewModel = new HomeViewModel();
 
 exports.pageLoaded = function(args) {
   var titre = "Paramètre";
