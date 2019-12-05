@@ -24,19 +24,23 @@
 			<StackLayout orientation="horizontal">
 				<!-- Item 1 Navigation -->
 				<StackLayout class="navItem" tap="{{ goToMap }}">
-					<Label text="&#xf5a0;" color="{{ mainColor }}" android:style="font-size:25;margin-top:15" class="fas"/>
+					<Label text="&#xf5a0;" color="{{ mainColor }}" android:style="font-size:25;margin-top:9" class="fas"/>
+					<Label text="Map" color="{{mainColor}}" android:style="margin-left:3" />
 				</StackLayout>
 				<!-- Item 2 Navigation -->
 				<StackLayout class="navItem" tap="{{ goToNews }}">
-					<Label text="&#xf1ea;" android:style="font-size:25;margin-top:15" class="fas"/>
+					<Label text="&#xf1ea;" android:style="font-size:25;margin-top:9" class="fas"/>
+					<Label text="News" android:style="margin-left:3" />
 				</StackLayout>
 				<!-- Item 3 Navigation -->
 				<StackLayout class="navItem" tap="{{ goToFriends }}">
-					<Label text="&#xf500;" android:style="font-size:25;margin-top:15" class="fas"/>
+					<Label text="&#xf500;" android:style="font-size:25;margin-top:9" class="fas"/>
+					<Label text="Friends" android:style="margin-left:3"/>
 				</StackLayout>
 				<!-- Item 4 Navigation -->
 				<StackLayout class="navItem" tap="{{ goToEvents }}">
-					<Label text="&#xf784;" android:style="font-size:25;margin-top:15" class="fas"/>
+					<Label text="&#xf784;" android:style="font-size:25;margin-top:9" class="fas"/>
+					<Label text="Events" android:style="margin-left:3"/>
 				</StackLayout>
 			</StackLayout>
 		</StackLayout>
