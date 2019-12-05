@@ -1,8 +1,9 @@
-const HomeViewModel = require("../home/home-view-model");
-const homeViewModel = new HomeViewModel();
+var menuViewModel = require("./menu-view-model").menuViewModel;
 
-exports.pageLoaded = function(args) {
-  var titre = "Paramètre";
-  const page = args.object;
-  page.bindingContext = homeViewModel;
+function pageLoaded(args) {
+  
+  var page = args.object;
+  page.bindingContext = menuViewModel(page);
 }
+
+exports.pageLoaded = pageLoaded;

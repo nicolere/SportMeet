@@ -1,11 +1,13 @@
-const HomeViewModel = require("../home/home-view-model");
+var theEventViewModel = require('./theEvent-view-model').theEventViewModel;
 const HtmlView = require("tns-core-modules/ui/html-view").HtmlView;
-const homeViewModel = new HomeViewModel();
 
-exports.pageLoaded = function(args) {
+
+function pageLoaded(args) {
 
   const myHtmlView = new HtmlView();
   
-  const page = args.object;
-  page.bindingContext = homeViewModel;
+  var page = args.object;
+  page.bindingContext = theEventViewModel(page);
 }
+
+exports.pageLoaded = pageLoaded;

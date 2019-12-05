@@ -1,14 +1,13 @@
 const observableModule = require("tns-core-modules/data/observable").Observable;
 const topmost = require("tns-core-modules/ui/frame").topmost;
-const HtmlView = require("tns-core-modules/ui/html-view").HtmlView;
 
 const viewModel = new observableModule();
 
-let HViewModel = page => {
-    viewModel.set("mainColor", "#1aa3ff");
-    viewModel.set("titre_page", "Carte du sport");
-    return viewModel;
-};
+let menuViewModel = page => {
+    viewModel.set('titreView', "Paramètres")
+
+    return viewModel
+}
 
 viewModel.goToMenu = args => {
     // console.log("Navigate vers Menu");
@@ -35,15 +34,6 @@ viewModel.goToMap = args => {
     });
 };
 
-viewModel.goToNews = args => {
-    // console.log("Navigate vers News");
-    topmost().navigate({
-        moduleName: "news/news-page",
-        clearHistory: true,
-        animated: true
-    });
-};
-
 viewModel.goToFriends = args => {
     // console.log("Navigate vers Friends");
     topmost().navigate({
@@ -62,15 +52,6 @@ viewModel.goToEvents = args => {
     });
 };
 
-viewModel.getToTheEvent = args => {
-    // console.log("Navigate vers the Event")
-    topmost().navigate({
-        moduleName: "theEvent/theEvent-page",
-        clearHistory: true,
-        animated: true
-    });
-};
-
 viewModel.getToProfil = args => {
     // console.log("Navigate vers the Event")
     topmost().navigate({
@@ -80,4 +61,4 @@ viewModel.getToProfil = args => {
     });
 };
 
-exports.HViewModel = HViewModel;
+exports.menuViewModel = menuViewModel;

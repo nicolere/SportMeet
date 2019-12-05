@@ -61,4 +61,13 @@ viewModel.goToEvents = args => {
     });
 };
 
+viewModel.goToTheEvent = args => {
+    // console.log("Navigate vers the Event")
+    topmost().navigate({
+        moduleName: "theEvent/theEvent-page",
+        clearHistory: true,
+        animated: true
+    });
+};
+
 exports.eventsViewModel = eventsViewModel;
