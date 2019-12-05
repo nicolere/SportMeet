@@ -1,11 +1,11 @@
-const observableModule = require("tns-core-modules/data/observable").Observable;
+var observableModule = require("tns-core-modules/data/observable").Observable;
 const topmost = require("tns-core-modules/ui/frame").topmost;
 
 const viewModel = new observableModule();
 
-let HViewModel = page => {
-    viewModel.set("mainColor", "#1aa3ff");
-    viewModel.set("titre_page", "Carte du sport");
+let eventsViewModel = page => {
+    viewModel.set("eventsColor", "#1aa3ff");
+
     return viewModel;
 };
 
@@ -61,4 +61,4 @@ viewModel.goToEvents = args => {
     });
 };
 
-exports.HViewModel = HViewModel;
+exports.eventsViewModel = eventsViewModel;

@@ -1,31 +1,21 @@
 <Page loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd" >
-	<ActionBar title="SportMeet">
+    <ActionBar title="SportMeet">
 		<NavigationButton icon="res://menu" tap="{{ goToMenu }}"/>
 		<ActionItem tap="{{ deconnexion }}" text="Déconnexion" android.position="popup" />
 	</ActionBar>
 
-	<DockLayout>
-			<!-- <FlexboxLayout dock="top" class="page" backgroundImage="~/images/carteGrenoble.png">
-				<AbsoluteLayout class="connexion-top">
-					<Label class="title" text="{{titre_page}}" />
-					<TextField id="confirmPassword" type="search" class="searchBar"
-					hint="Nom/Lieux/Événement" returnKeyType="done" />
-				</AbsoluteLayout>
-				<GridLayout columns="auto, *, auto" rows="auto, 25" class="center">
-					<Image src="~/images/deroulant.png" tap="deconnexion" rowSpan="2" height="50" width="50" margin="3" verticalAlignment="top"/>
-				</GridLayout>
-			</FlexboxLayout> -->
-		<StackLayout dock="top" height="90%" width="100%" style="">
+    <DockLayout>
+        <StackLayout dock="top" height="90%" width="100%" style="">
 		<!-- Main Content -->
 		</StackLayout>
 
-		<!-- Barre de navigation -->
+        <!-- Barre de navigation -->
 		<StackLayout dock="bottom" height="10%" style="border-color:#E4E4E4;border-width:1;background:#fff;">
 			<StackLayout orientation="horizontal">
 				<!-- Item 1 Navigation -->
 				<StackLayout class="navItem" tap="{{ goToMap }}">
-					<Label text="&#xf5a0;" color="{{ mainColor }}" android:style="font-size:25;margin-top:9" class="fas"/>
-					<Label text="Map" color="{{mainColor}}" android:style="margin-left:3" />
+					<Label text="&#xf5a0;" android:style="font-size:25;margin-top:9" class="fas"/>
+					<Label text="Map" android:style="margin-left:3" />
 				</StackLayout>
 				<!-- Item 2 Navigation -->
 				<StackLayout class="navItem" tap="{{ goToNews }}">
@@ -39,10 +29,13 @@
 				</StackLayout>
 				<!-- Item 4 Navigation -->
 				<StackLayout class="navItem" tap="{{ goToEvents }}">
-					<Label text="&#xf784;" android:style="font-size:25;margin-top:9" class="fas"/>
-					<Label text="Events" android:style="margin-left:3"/>
+					<Label text="&#xf784;" color="{{ eventsColor }}" android:style="font-size:25;margin-top:9" class="fas"/>
+					<Label text="Events" color="{{ eventsColor }}" android:style="margin-left:3"/>
 				</StackLayout>
 			</StackLayout>
 		</StackLayout>
-	</DockLayout>
+    </DockLayout>
+
+
+
 </Page>

@@ -1,15 +1,11 @@
 <Page loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd">
-	<ActionBar title="t">
-  		<!--<NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="{{onNavBtnTap}}"/> -->
-		<ActionItem icon="~/images/map.png" tap="{{ getToMap}}" />
-		<ActionItem icon="~/images/news.png" tap="{{ getToNews }}" />
-		<ActionItem icon="~/images/add_friend.jpg"/>
-		<ActionItem icon="~/images/loupe.png" tap="{{ deconnexion }}" />
-		<ActionItem icon="~/images/menu.jpg" tap="{{ getToMenu }}"/>
-		<!-- <ActionItem text="Test" icon="~/images/menu.jpg" tap="{{onNavBtnTap}}" android.position="popup"></ActionItem> -->
+	<ActionBar title="SportMeet">
+  		<NavigationButton icon="res://menu" tap="{{ goToMenu }}"/>
+		<ActionItem tap="{{ deconnexion }}" text="Déconnexion" android.position="popup" />
 	</ActionBar>
 
-	<FlexboxLayout class="page">
+	<DockLayout>
+	<!-- <FlexboxLayout class="page">
         <AbsoluteLayout class ="connexion-top">
         	<Label class="title" text="Mes amis" />
 			<TextField id="confirmPassword" type="search" class="searchBar" text="{{ confirmPassword }}"
@@ -22,11 +18,36 @@
                 </ListView.itemTemplate>
             </ListView>
 		</GridLayout>
+	</FlexboxLayout> -->
 
-		<!--<Button text="toast" tap="{{ deconnexion }}"/> -->
-		<!--<label class="petitimage" src="~/images/deroulant.png" /> -->
-        <!--    <Label class="test" text="Bienvenue"/> -->
-		<!--<Image class="menu_deroulant" src="~/images/deroulant.png" />
-		<Image class="logo" src="~/images/carteGrenoble.png" /> -->
-	</FlexboxLayout>
+		<StackLayout dock="top" height="90%" width="100%" style="">
+			<!-- Main Content -->
+		</StackLayout>
+
+	<!-- Barre de navigation -->
+		<StackLayout dock="bottom" height="10%" style="border-color:#E4E4E4;border-width:1;background:#fff;">
+			<StackLayout orientation="horizontal">
+				<!-- Item 1 Navigation -->
+				<StackLayout class="navItem" tap="{{ goToMap }}">
+					<Label text="&#xf5a0;" android:style="font-size:25;margin-top:9" class="fas"/>
+					<Label text="Map" android:style="margin-left:3" />
+				</StackLayout>
+				<!-- Item 2 Navigation -->
+				<StackLayout class="navItem" tap="{{ goToNews }}">
+					<Label text="&#xf1ea;" android:style="font-size:25;margin-top:9" class="fas"/>
+					<Label text="News" android:style="margin-left:3" />
+				</StackLayout>
+				<!-- Item 3 Navigation -->
+				<StackLayout class="navItem" tap="{{ goToFriends }}">
+					<Label text="&#xf500;" color="{{ friendsColor }}" android:style="font-size:25;margin-top:9" class="fas"/>
+					<Label text="Friends" color="{{ friendsColor }}" android:style="margin-left:3"/>
+				</StackLayout>
+				<!-- Item 4 Navigation -->
+				<StackLayout class="navItem" tap="{{ goToEvents }}">
+					<Label text="&#xf784;" android:style="font-size:25;margin-top:9" class="fas"/>
+					<Label text="Events" android:style="margin-left:3"/>
+				</StackLayout>
+			</StackLayout>
+		</StackLayout>
+	</DockLayout>
 </Page>

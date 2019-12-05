@@ -1,8 +1,9 @@
-const HomeViewModel = require("../home/home-view-model");
-const homeViewModel = new HomeViewModel();
+var friendsViewModel = require("./friends-view-model").friendsViewModel;
 
-exports.pageLoaded = function(args) {
-  var titre = "Carte du sport";
-  const page = args.object;
-  page.bindingContext = homeViewModel;
+function pageLoaded(args) {
+    var page = args.object;
+
+    page.bindingContext = friendsViewModel(page);
 }
+
+exports.pageLoaded = pageLoaded;
