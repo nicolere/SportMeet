@@ -3,51 +3,73 @@
 		<NavigationButton icon="res://menu" tap="{{ goToMenu }}"/>
 		<ActionItem tap="{{ deconnexion }}" text="Déconnexion" android.position="popup" />
 	</ActionBar>
-    
-    <ScrollView>
-	<FlexboxLayout class="page">
-        <AbsoluteLayout class ="connexion-top">
-			<GridLayout columns="160 , 5*" rows="auto,auto,auto">
+    <DockLayout>
+        <ScrollView dock="top" height="90%" width="100%">
+            <FlexboxLayout class="page">
+                <AbsoluteLayout class ="connexion-top">
+                    <GridLayout columns="160 , 5*" rows="auto,auto,auto">
 
-				<Image row="0" col="0" class="GridCenter" rowSpan="3" colSpan="1" width="100%" src="~/images/football.png"/>
+                        <Image row="0" col="0" class="GridCenter" rowSpan="3" colSpan="1" width="100%" src="~/images/football.png"/>
 
-				<label row="0" col="1" class="Name" text="13ème foulée parisienne"/>
-				<label row="1" col="1" class="Name" text="le 13 décembre 2019"/>
-                <HtmlView row="2" col="1" html="<a href='https://example.com'>Redirection vers le site officiel</a></li>"></HtmlView>
-			</GridLayout>
-		</AbsoluteLayout>
+                        <label row="0" col="1" class="Name" text="13ème foulée parisienne"/>
+                        <label row="1" col="1" class="Name" text="le 13 décembre 2019"/>
+                        <HtmlView row="2" col="1" html="<a href='https://example.com'>Redirection vers le site officiel</a></li>"></HtmlView>
+                    </GridLayout>
+                </AbsoluteLayout>
 
-		<StackLayout class="hr-dark"></StackLayout>
+                <StackLayout class="hr-dark"></StackLayout>
 
-        <StackLayout orientation="horizontal" width="100%" height="auto">
-				<HtmlView  html="<p>ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? vers le site</p>"></HtmlView>
-	    </StackLayout>
+                <StackLayout orientation="horizontal" width="100%" height="auto">
+                        <HtmlView  html="<p>ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? vers le site</p>"></HtmlView>
+                </StackLayout>
 
-        <StackLayout class="hr-dark"></StackLayout>
+                <StackLayout class="hr-dark"></StackLayout>
 
-    <GridLayout rows="auto">
-        <ScrollView row="1" orientation="horizontal">
-            <StackLayout orientation="horizontal">
-            <StackLayout style="color: white; margin: 10; font-size: 13;" class="text-center">
-                <Image src="~/images/testEvenement2.png" height="100%" margin="5"></Image>
-            </StackLayout>  
-            <StackLayout style="color: white; margin: 10; font-size: 13;" class="text-center">
-                <Image src="~/images/testEvenement1.png" height="100%" margin="5"></Image>
-            </StackLayout>
-            <StackLayout style="color: white; margin: 10; font-size: 13;" class="text-center">
-                <Image src="~/images/testEvenement1.png" height="100%" margin="5"></Image>
-            </StackLayout>
-            <StackLayout style="color: white; margin: 10; font-size: 13;" class="text-center">
-                <Image src="~/images/testEvenement1.png" height="100%" margin="5"></Image>
-            </StackLayout>
-            </StackLayout>
+                <GridLayout rows="auto">
+                    <ScrollView row="1" orientation="horizontal">
+                        <StackLayout orientation="horizontal">
+                        <StackLayout style="color: white; margin: 10; font-size: 13;" class="text-center">
+                            <Image src="~/images/testEvenement2.png" height="100%" margin="5"></Image>
+                        </StackLayout>  
+                        <StackLayout style="color: white; margin: 10; font-size: 13;" class="text-center">
+                            <Image src="~/images/testEvenement1.png" height="100%" margin="5"></Image>
+                        </StackLayout>
+                        <StackLayout style="color: white; margin: 10; font-size: 13;" class="text-center">
+                            <Image src="~/images/testEvenement1.png" height="100%" margin="5"></Image>
+                        </StackLayout>
+                        <StackLayout style="color: white; margin: 10; font-size: 13;" class="text-center">
+                            <Image src="~/images/testEvenement1.png" height="100%" margin="5"></Image>
+                        </StackLayout>
+                        </StackLayout>
+                    </ScrollView>
+                </GridLayout>  
+            </FlexboxLayout>
         </ScrollView>
-    </GridLayout>
-    
-    
-    
-    
-    </FlexboxLayout>
 
-    </ScrollView>
+        <!-- Barre de navigation -->
+		<StackLayout dock="bottom" height="10%" backgroundColor="blue" style="border-color:#E4E4E4;border-width:1;background:#fff;">
+			<StackLayout orientation="horizontal">
+				<!-- Item 1 Navigation -->
+				<StackLayout class="navItem" tap="{{ goToMap }}">
+					<Label text="&#xf5a0;" android:style="font-size:25;margin-top:9" class="fas"/>
+					<Label text="Map" android:style="margin-left:3" />
+				</StackLayout>
+				<!-- Item 2 Navigation -->
+				<StackLayout class="navItem" tap="{{ goToNews }}">
+					<Label text="&#xf1ea;" android:style="font-size:25;margin-top:9" class="fas"/>
+					<Label text="News" android:style="margin-left:3" />
+				</StackLayout>
+				<!-- Item 3 Navigation -->
+				<StackLayout class="navItem" tap="{{ goToFriends }}">
+					<Label text="&#xf500;" android:style="font-size:25;margin-top:9" class="fas"/>
+					<Label text="Friends" android:style="margin-left:3"/>
+				</StackLayout>
+				<!-- Item 4 Navigation -->
+				<StackLayout class="navItem" tap="{{ goToEvents }}">
+					<Label text="&#xf784;" color="{{ eventsColor }}" android:style="font-size:25;margin-top:9" class="fas"/>
+					<Label text="Events" color="{{ eventsColor }}" android:style="margin-left:3"/>
+				</StackLayout>
+			</StackLayout>
+		</StackLayout>
+    </DockLayout>
 </Page>
