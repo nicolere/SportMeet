@@ -5,17 +5,19 @@ const viewModel = new observableModule();
 
 let friendsViewModel = page => {
     viewModel.set("friendsColor", "#1aa3ff");
-    isFriend= false;
+    isFriend = false;
     viewModel.set("Text", "Demande d'ami");
     viewModel.set("Ajouter en ami", "Ajouter en ami");
-    viewModel.set("En attente","En attente");
+    viewModel.set("En attente", "En attente");
 
     return viewModel;
 };
 
 viewModel.setFriend = args => {
     isFriend = true;
+    var btn = args.object;
     viewModel.set("Text", "Invitation envoyé");
+    btn.backgroundColor = "#A1E8AF";
 };
 
 viewModel.goToMenu = args => {
@@ -75,7 +77,7 @@ viewModel.goToFriendProfil = args => {
         moduleName: "friendProfile/friendProfile-page",
         clearHistory: true,
         animated: true
-    })
-}
+    });
+};
 
 exports.friendsViewModel = friendsViewModel;

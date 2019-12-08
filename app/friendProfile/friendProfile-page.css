@@ -7,17 +7,15 @@
   vertical-align: middle;
 }
 
-.connexion-top
-{
-    width: 100%;
-    border-color: black;
-    border-bottom-width : 1.5;
-    height: 150;
-    float: top;
+.connexion-top {
+  width: 100%;
+  border-color: black;
+  border-bottom-width: 1.5;
+  height: 150;
+  float: top;
 }
 
-.title
-{
+.title {
   margin-top: 20;
   width: 100%;
   border-radius: 50%;
@@ -26,17 +24,15 @@
   color: white;
 }
 
-.searchBar
-{
+.searchBar {
   margin-top: 20;
   vertical-align: center;
   width: 225;
-  
+
   border-radius: 36px;
 }
 
-.test
-{
+.test {
   width: 100%;
   padding: 100;
   border-radius: 50%;
@@ -45,14 +41,13 @@
   color: white;
 }
 ActionBar {
-  background-color:  #8e7cc3;
+  background-color: #8e7cc3;
   color: white;
   border-color: blueviolet;
   border-width: 1.5;
 }
 
-.menu_deroulant
-{
+.menu_deroulant {
   float: left;
   height: 50;
   width: auto;
@@ -69,44 +64,41 @@ ActionBar {
   background-repeat: no-repeat;
 }
 
-.logo{
+.logo {
   height: 100%;
 }
 
-.actionMerg{
+.actionMerg {
   margin-right: 50;
-  float : left;
+  float: left;
   align-items: left;
 }
 
 .page {
-align-items: center;
-flex-direction: column;
+  align-items: center;
+  flex-direction: column;
 }
 
 .form {
-vertical-align: middle;
+  vertical-align: middle;
 }
 .header {
-font-size: 35;
-font-weight: 600;
-margin-bottom: 70;
-text-align: center;
+  font-size: 35;
+  font-weight: 600;
+  margin-bottom: 70;
+  text-align: center;
 }
 
-.GridCenter
-{
-  margin-top: 8; 
+.GridCenter {
+  margin-top: 8;
 }
 
-.Name
-{
-margin-top: 11;
-font-size: 15;
+.Name {
+  margin-top: 11;
+  font-size: 15;
 }
 
-.activityTitle
-{
+.activityTitle {
   border-radius: 50%;
   text-align: center;
   margin-top: 15;
@@ -114,28 +106,24 @@ font-size: 15;
   font-weight: bold;
 }
 
-.activity
-{
+.activity {
   border-radius: 50%;
   text-align: center;
 }
 
-.middleBarCenter
-{
+.middleBarCenter {
   border-radius: 50%;
   text-align: center;
-  margin-top:10;
+  margin-top: 10;
 }
 
-.textCenter
-{
+.textCenter {
   border-radius: 50%;
   text-align: center;
-  margin-top:22;
+  margin-top: 22;
 }
 
-.buttonEdit
-{
+.buttonEdit {
   height: 50;
   border-radius: 25%;
   background-color: #8e7cc3;
