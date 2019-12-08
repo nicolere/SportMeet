@@ -2,6 +2,7 @@ const observableModule = require("tns-core-modules/data/observable");
 const dialogsModule = require("tns-core-modules/ui/dialogs");
 const topmost = require("tns-core-modules/ui/frame").topmost;
 const DatePicker = require("tns-core-modules/ui/date-picker").DatePicker;
+const CheckBox = require("@nstudio/nativescript-checkbox").CheckBox;
 
 const userService = require("~/services/user-service");
 
@@ -16,10 +17,12 @@ function LoginViewModel() {
         name:"",
         title: "SportMeet",
         date:"",
+        items:{},
         Genre : ["Homme","Femme"],
         isLoggingIn: true,
         isMyProfilModif: true,
         processing: false,
+        titreView:"Paramètres",
 
         //Lorsque l'on passe dans la phase d'inscription et vice versa
         toggleForm() {
@@ -97,7 +100,46 @@ function LoginViewModel() {
                         });
                 }
             });
+        },
+
+        getToProfil(){
+            topmost().navigate({
+                moduleName: "profil/profil-page",
+                clearHistory: true
+            });
+        },
+
+        goToEvents(){
+            topmost().navigate({
+                moduleName: "events/events-page",
+                clearHistory: true
+            });
+        },
+
+        deconnexion()
+        {
+            topmost().navigate({
+                moduleName: "login/login-page",
+                clearHistory: true
+            });
+        },
+
+        goToMenu()
+        {
+            topmost().navigate({
+                moduleName: "menu/menu-page",
+                clearHistory: true
+            });
+        },
+
+        goToFriends()
+        {
+            topmost().navigate({
+                moduleName: "friends/friends-page",
+                clearHistory: true
+            });
         }
+        
     });
 
     return viewModel;

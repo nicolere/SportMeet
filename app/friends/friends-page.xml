@@ -5,23 +5,59 @@
 	</ActionBar>
 
 	<DockLayout>
-	<!-- <FlexboxLayout class="page">
-        <AbsoluteLayout class ="connexion-top">
-        	<Label class="title" text="Mes amis" />
-			<TextField id="confirmPassword" type="search" class="searchBar" text="{{ confirmPassword }}"
-			hint="Nom" returnKeyType="done" />
-		</AbsoluteLayout>
-		<GridLayout columns="auto, *" rows="auto, 25" class="center">
-			<ListView items="{{friendList}}">
-                <ListView.itemTemplate>
-                    <label text="{{name}}" horizontalAlignment="left" verticalAlignment="center"/>
-                </ListView.itemTemplate>
-            </ListView>
-		</GridLayout>
-	</FlexboxLayout> -->
 
 		<StackLayout dock="top" height="90%" width="100%" style="">
-			<!-- Main Content -->
+			<ScrollView dock="top" height="90%" width="100%">
+		<FlexboxLayout class="page">
+			<AbsoluteLayout class ="connexion-top">
+				<Label class="title" text="{{Title}}" />
+				<TextField id="searchFriend" type="search" class="searchBar" text="Nom/Prénom" returnKeyType="done" />
+			</AbsoluteLayout>
+
+			<StackLayout orientation="vertical" width="100%" height="auto" margin-top="75px">
+				<StackLayout orientation="horizontal" width="100%">
+					<Image src="~/images/profil.png" tap="{{goToFriendProfil}}" height="auto" width="50"/>
+						<StackLayout orientation="vertical" width="70%" margin-top="75px">
+							<Label class="GridCenter" tap="{{goToFriendProfil}}" text="Edouard DELATTRE"/>
+							<label class="Bold" text="0 amis en commun"/>
+						</StackLayout>
+					<Image src="~/images/add_friend.png" tap="{{goToFriendProfil}}" height="50" width="50"/>
+				</StackLayout>
+				<StackLayout class="hr-dark m-5"></StackLayout>
+
+				<StackLayout orientation="horizontal" width="100%">
+					<Image src="~/images/profil.png" backgroudColor="green" width="50"/>
+						<StackLayout orientation="vertical" width="70%" height="auto" margin-top="75px">
+							<Label class="GridCenter" text="Nicolas GAU"/>
+							<label class="Bold" text="0 amis en commun"/>
+						</StackLayout>
+					<Image src="~/images/add_friend.png" tap="{{deconnexion}}" height="50" width="50"/>
+				</StackLayout>
+				<StackLayout class="hr-dark m-5"></StackLayout>
+
+				<StackLayout orientation="horizontal" width="100%">
+					<Image src="~/images/profil.png" tap="{{deconnexion}}" width="50"/>
+						<StackLayout orientation="vertical" width="70%" height="auto" margin-top="75px">
+							<Label class="GridCenter" text="Un random"/>
+							<label class="Bold" text="0 amis en commun"/>
+						</StackLayout>
+					<Image src="~/images/add_friend.png" tap="{{deconnexion}}" height="50" width="50"/>
+				</StackLayout>
+				<StackLayout class="hr-dark m-5"></StackLayout>
+
+				<StackLayout orientation="horizontal" width="100%">
+					<Image src="~/images/profil.png" tap="{{deconnexion}}" width="50"/>
+						<StackLayout orientation="vertical" width="70%" height="auto" margin-top="75px">
+							<Label class="GridCenter" text="Un random"/>
+							<label class="Bold" text="0 amis en commun"/>
+						</StackLayout>
+					<Image src="~/images/add_friend.png" tap="{{deconnexion}}" height="50" width="50"/>
+				</StackLayout>
+				<StackLayout class="hr-dark m-5"></StackLayout>
+			</StackLayout>
+
+		</FlexboxLayout>
+		</ScrollView>
 		</StackLayout>
 
 	<!-- Barre de navigation -->

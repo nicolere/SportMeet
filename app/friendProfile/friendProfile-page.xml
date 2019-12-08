@@ -1,0 +1,82 @@
+<Page loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd">
+	<ActionBar title="SportMeet" tap="{{ goToMap }}">
+  		<NavigationButton icon="res://menu" tap="{{ goToMenu }}"/>
+		<ActionItem tap="{{ deconnexion }}" text="Déconnexion" android.position="popup" />
+	</ActionBar>
+
+	<DockLayout>
+		<ScrollView dock="top" height="90%" width="100%">
+		<FlexboxLayout class="page">
+			<AbsoluteLayout class ="connexion-top">
+				<GridLayout columns="160 , 5*" rows="30,25,100">
+
+					<Image row="0" col="0" class="GridCenter" rowSpan="3" colSpan="1" width="100%" src="~/images/profil.png"/>
+
+					<label row="0" col="1" class="Name" text="Edouard DELATTRE"/>
+					<StackLayout orientation="horizontal" row="1" col="1">
+						<label text="22" class="GridCenter" textWrap="true"/>
+						<label text=" ans" class="GridCenter" textWrap="true"/>
+					</StackLayout>
+					<Button row="2" col="1" text="{{Text}}" tap="{{setFriend}}" class="buttonEdit"/>
+				</GridLayout>
+			</AbsoluteLayout>
+
+			<GridLayout columns="5* ,1, 5*" rows="50,50">
+
+					<label row="0" col="0" class="middleBarCenter" text="Expérience: " />
+					<label row="2" col="0" class="middleBarCenter" text="Moins d'une heure"/>
+
+					<label row="0" col="1" text="test" backgroundColor="black" />
+					<label row="2" col="1" text="test" backgroundColor="black" />
+
+					<label row="0" col="2" class="middleBarCenter" text="Sport préféré: " />
+					<label row="2" col="2" class="middleBarCenter" text="Football"/>
+			</GridLayout>
+
+			<StackLayout class="hr-dark"></StackLayout>
+
+			<GridLayout columns="1* , 1*" rows="50,50,50,50">
+
+				<label row="0" col="0" class="activityTitle" text="Football :"/>
+				<label row="1" col="0" class="activity" text="Niveau confirmé"/>
+
+				<label row="0" col="1" class="activityTitle" text="Pétanque :"/>
+				<label row="1" col="1" class="activity" text="Niveau professionnel"/>
+
+				<label row="2" col="0" class="activityTitle" text="Course à pied :"/>
+				<label row="3" col="0" class="activity" text="Niveau amateur"/>
+
+				<label row="2" col="1" class="activityTitle" text="Natation :"/>
+				<label row="3" col="1" class="activity" text="Enclume"/>
+
+			</GridLayout>
+
+		</FlexboxLayout>
+		</ScrollView>
+	<!-- Barre de navigation -->
+		<StackLayout dock="bottom" height="10%" backgroundColor="blue" style="border-color:#E4E4E4;border-width:1;background:#fff;">
+			<StackLayout orientation="horizontal">
+				<!-- Item 1 Navigation -->
+				<StackLayout class="navItem" tap="{{ goToMap }}">
+					<Label text="&#xf5a0;" android:style="font-size:25;margin-top:9" class="fas"/>
+					<Label text="Map" android:style="margin-left:3" />
+				</StackLayout>
+				<!-- Item 2 Navigation -->
+				<StackLayout class="navItem" tap="{{ goToNews }}">
+					<Label text="&#xf1ea;" android:style="font-size:25;margin-top:9" class="fas"/>
+					<Label text="News" android:style="margin-left:3" />
+				</StackLayout>
+				<!-- Item 3 Navigation -->
+				<StackLayout class="navItem" tap="{{ goToFriends }}">
+					<Label text="&#xf500;" color="{{ friendsColor }}" android:style="font-size:25;margin-top:9" class="fas"/>
+					<Label text="Friends" color="{{ friendsColor }}" android:style="margin-left:3"/>
+				</StackLayout>
+				<!-- Item 4 Navigation -->
+				<StackLayout class="navItem" tap="{{ goToEvents }}">
+					<Label text="&#xf784;" android:style="font-size:25;margin-top:9" class="fas"/>
+					<Label text="Events" android:style="margin-left:3"/>
+				</StackLayout>
+			</StackLayout>
+		</StackLayout>
+	</DockLayout>
+</Page>

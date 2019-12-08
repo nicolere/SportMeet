@@ -5,7 +5,7 @@ const HtmlView = require("tns-core-modules/ui/html-view").HtmlView;
 const viewModel = new observableModule();
 
 let HViewModel = page => {
-    viewModel.set("mainColor", "#1aa3ff");
+    viewModel.set("mainColor", "blue");
     viewModel.set("titre_page", "Carte du sport");
     return viewModel;
 };

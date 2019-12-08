@@ -1,4 +1,5 @@
-<Page loaded="pageLoaded" class="page" actionBarHidden="true" xmlns="http://www.nativescript.org/tns.xsd">
+<Page loaded="pageLoaded" class="page" actionBarHidden="true"  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:CheckBox="@nstudio/nativescript-checkbox">
 <ScrollView>
     <FlexboxLayout class="page">
         <StackLayout class="form">
@@ -7,11 +8,6 @@
 
             <Label class="test" text="Bienvenue"/>
         </AbsoluteLayout>
-            <!-- <WrapLayout>
-                <label text="" width="50" height="50" border-left="50" border-right="50" border-bottom="100" backgroundColor="blue"/>
-            </WrapLayout> -->
-        
-            <!-- <Image class="logo" src="~/images/logo.png" /> -->
             
             <GridLayout rows="auto, auto, auto, auto, auto,auto,auto, auto" col="50 ,50" >
                 <StackLayout row="0" class="input-field">
@@ -60,7 +56,30 @@
 
                 <ListPicker row="0" col="0" class="input-field" items="{{ Genre }}" selectedIndex="0" loaded="onListPickerLoaded" />
                 <DatePicker row="0" col="1" colSpan="2" loaded="onDatePickerLoaded" date="{{ date }}"></DatePicker>
+
             </GridLayout>
+
+            <GridLayout columns="1*, 1*, 1*" rows="auto, auto, auto" visibility="{{ !isLoggingIn ? 'visible' : 'collapse' }}">
+
+                <label row="0" colSpan="3" text="Choississez vos sports préféré"/>
+                <StackLayout row="1" col="0">
+                    <CheckBox:CheckBox row="1" col="1" text="Football" id="myCheckboxFootball" />
+                    <CheckBox:CheckBox row="1" col="2" text="Rugby" id="myCheckboxRugby"/>
+                </StackLayout>
+
+                <StackLayout row="1" col="1">
+                    <CheckBox:CheckBox row="1" col="1" text="Basketball" id="myCheckboxBasketball" />
+                    <CheckBox:CheckBox row="1" col="1" text="Pétanque" id="myCheckboxPétanque" />
+                </StackLayout>
+
+                <StackLayout row="1" col="2">
+                    <CheckBox:CheckBox tap="{{ test }}" row="1" col="1" text="Tennis" id="myCheckboxTennis" />
+                    <CheckBox:CheckBox row="1" col="1" text="Course" id="myCheckboxCourse" />
+                </StackLayout>
+
+            </GridLayout>
+
+
             
 
             <Button text="{{ isLoggingIn ? 'Connexion' : 'S incrire' }}" tap="{{ submit }}" isEnabled="{{ !processing }}"

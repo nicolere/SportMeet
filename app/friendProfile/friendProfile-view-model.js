@@ -5,9 +5,17 @@ const viewModel = new observableModule();
 
 let friendsViewModel = page => {
     viewModel.set("friendsColor", "#1aa3ff");
-    viewModel.set("Title", "Liste d'amis");
+    isFriend= false;
+    viewModel.set("Text", "Demande d'ami");
+    viewModel.set("Ajouter en ami", "Ajouter en ami");
+    viewModel.set("En attente","En attente");
 
     return viewModel;
+};
+
+viewModel.setFriend = args => {
+    isFriend = true;
+    viewModel.set("Text", "Invitation envoyé");
 };
 
 viewModel.goToMenu = args => {

@@ -76,36 +76,6 @@ Textfield::-webkit-input-placeholder {
   border-radius: 36px;
 }
 
-.test {
-  width: 100%;
-  padding: 100;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 18;
-  color: white;
-}
-
-.menu_deroulant {
-  float: left;
-  height: 50;
-  width: auto;
-}
-
-.petitimage {
-  position: absolute;
-  width: 10;
-  height: 10;
-}
-
-.page {
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.logo {
-  height: 100%;
-}
-
 .actionMerg {
   margin-right: 50;
   float: left;
