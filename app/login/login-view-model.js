@@ -156,6 +156,14 @@ function LoginViewModel() {
             });
         },
 
+        goToNews() {
+            // console.log("Navigate vers News");
+            topmost().navigate({
+                moduleName: "news/news-page",
+                clearHistory: true
+            });
+        },
+
         goToMap() {
             // console.log("Navigate vers Map");
             topmost().navigate({

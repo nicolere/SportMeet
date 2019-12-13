@@ -20,7 +20,7 @@
 							<Label class="GridCenter" tap="{{goToTheEvent}}" text="13 foulée parisienne"/>
 							<label class="Bold" tap="{{goToTheEvent}}" text="le 13 décembre 2019"/>
 						</StackLayout>
-					<Image src="~/images/deconnexion.png" height="50" width="50"/>
+					<Image src="~/images/deconnexion.png" tap="{{goToTheEvent}}" height="50" width="50"/>
 				</StackLayout>
 				<StackLayout class="hr-dark m-5"></StackLayout>
 

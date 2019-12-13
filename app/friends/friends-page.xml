@@ -31,27 +31,27 @@
 							<Label class="GridCenter" text="Nicolas GAU"/>
 							<label class="Bold" text="0 amis en commun"/>
 						</StackLayout>
-					<Image src="~/images/add_friend.png" tap="{{deconnexion}}" height="50" width="50"/>
+					<Image src="~/images/add_friend.png" height="50" width="50"/>
 				</StackLayout>
 				<StackLayout class="hr-dark m-5"></StackLayout>
 
 				<StackLayout orientation="horizontal" width="100%">
-					<Image src="~/images/profil.png" tap="{{deconnexion}}" width="50"/>
+					<Image src="~/images/profil.png" width="50"/>
 						<StackLayout orientation="vertical" width="70%" height="auto" margin-top="75px">
 							<Label class="GridCenter" text="Un random"/>
 							<label class="Bold" text="0 amis en commun"/>
 						</StackLayout>
-					<Image src="~/images/add_friend.png" tap="{{deconnexion}}" height="50" width="50"/>
+					<Image src="~/images/add_friend.png" height="50" width="50"/>
 				</StackLayout>
 				<StackLayout class="hr-dark m-5"></StackLayout>
 
 				<StackLayout orientation="horizontal" width="100%">
-					<Image src="~/images/profil.png" tap="{{deconnexion}}" width="50"/>
+					<Image src="~/images/profil.png" width="50"/>
 						<StackLayout orientation="vertical" width="70%" height="auto" margin-top="75px">
 							<Label class="GridCenter" text="Un random"/>
 							<label class="Bold" text="0 amis en commun"/>
 						</StackLayout>
-					<Image src="~/images/add_friend.png" tap="{{deconnexion}}" height="50" width="50"/>
+					<Image src="~/images/add_friend.png" height="50" width="50"/>
 				</StackLayout>
 				<StackLayout class="hr-dark m-5"></StackLayout>
 			</StackLayout>
@@ -60,7 +60,7 @@
 		</ScrollView>
 		</StackLayout>
 
-	<!-- Barre de navigation -->
+		<!-- Barre de navigation -->
 		<StackLayout dock="bottom" height="10%" style="border-color:#E4E4E4;border-width:1;background:#fff;">
 			<StackLayout orientation="horizontal">
 				<!-- Item 1 Navigation -->
