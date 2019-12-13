@@ -46,7 +46,7 @@ function LoginViewModel() {
             }
         },
         login() {
-            console.log("la co");
+            // console.log("la co");
             userService
                 .login({
                     email: this.email,

@@ -6,12 +6,6 @@
 .form {
   vertical-align: middle;
 }
-.header {
-  font-size: 35;
-  font-weight: 600;
-  margin-bottom: 70;
-  text-align: center;
-}
 
 .page .input-field {
   margin-top: 20;
@@ -26,7 +20,6 @@
   margin-right: 30;
   flex-grow: 2;
   font-size: 18;
-  placeholder-color: #A8A8A8;
 }
 .input:disabled {
   margin-left: 30;
@@ -44,18 +37,15 @@
   background-color: #8e7cc3;
 }
 
-.title
-{
+.title {
   width: 100%;
   border-radius: 50%;
   text-align: center;
   font-size: 25;
   color: white;
-  
 }
 
-.test
-{
+.test {
   width: 100%;
   padding: 100;
   border-radius: 50%;
@@ -65,29 +55,17 @@
 }
 
 .login-label {
-  color: #A8A8A8;
+  color: #a8a8a8;
   font-size: 16;
 }
 .sign-up-label {
   margin-bottom: 20;
 }
-.bold {
-  color: #000000; 
-}
 
-.connexion-top{
+.connexion-top {
   width: 100%;
   border-color: blueviolet;
-  border-bottom-width : 1.5;
+  border-bottom-width: 1.5;
   height: 185;
   background-color: #8e7cc3;
 }
-
-.triangle-up {
-  width: 50;
-  height: 50;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 100px solid red;
-}
-

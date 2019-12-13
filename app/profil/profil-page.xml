@@ -25,9 +25,6 @@
 					<label row="0" col="0" class="middleBarCenter" text="Expérience: " />
 					<label row="2" col="0" class="middleBarCenter" text="Moins d'une heure"/>
 
-					<label row="0" col="1" text="test" backgroundColor="black" />
-					<label row="2" col="1" text="test" backgroundColor="black" />
-
 					<label row="0" col="2" class="middleBarCenter" text="Sport préféré: " />
 					<label row="2" col="2" class="middleBarCenter" text="Football"/>
 			</GridLayout>

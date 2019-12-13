@@ -3,10 +3,6 @@
   flex-direction: column;
 }
 
-.form {
-  vertical-align: middle;
-}
-
 .connexion-top {
   width: 100%;
   border-color: black;
@@ -22,71 +18,6 @@
   text-align: center;
   font-size: 22;
   color: white;
-}
-
-.searchBar {
-  margin-top: 20;
-  vertical-align: center;
-  width: 225;
-
-  border-radius: 36px;
-}
-
-.test {
-  width: 100%;
-  padding: 100;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 18;
-  color: white;
-}
-ActionBar {
-  background-color: #8e7cc3;
-  color: white;
-  border-color: blueviolet;
-  border-width: 1.5;
-}
-
-.menu_deroulant {
-  float: left;
-  height: 50;
-  width: auto;
-}
-
-.petitimage {
-  position: absolute;
-  width: 10;
-  height: 10;
-}
-
-.page {
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.logo {
-  height: 100%;
-}
-
-.actionMerg {
-  margin-right: 50;
-  float: left;
-  align-items: left;
-}
-
-.page {
-  align-items: center;
-  flex-direction: column;
-}
-
-.form {
-  vertical-align: middle;
-}
-.header {
-  font-size: 35;
-  font-weight: 600;
-  margin-bottom: 70;
-  text-align: center;
 }
 
 .GridCenter {
@@ -115,12 +46,6 @@ ActionBar {
   border-radius: 50%;
   text-align: center;
   margin-top: 10;
-}
-
-.textCenter {
-  border-radius: 50%;
-  text-align: center;
-  margin-top: 22;
 }
 
 .buttonEdit {
