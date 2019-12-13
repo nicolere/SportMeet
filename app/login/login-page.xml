@@ -6,12 +6,12 @@
         <AbsoluteLayout class ="connexion-top">
             <Label class="title" text="{{title}}" />
 
-            <Label class="test" text="Bienvenue"/>
+            <Label class="underTitle" text="Bienvenue"/>
         </AbsoluteLayout>
             
             <GridLayout rows="auto, auto, auto, auto, auto,auto,auto, auto" col="50 ,50" >
                 <StackLayout row="0" class="input-field">
-                    <label text="Login"/>
+                    <label text="Adresse mail"/>
                     <TextField class="input" text="{{ email }}" hint=""
                         keyboardType="email" autocorrect="false"
                         autocapitalizationType="none" returnKeyType="next" />
@@ -19,7 +19,7 @@
                 </StackLayout>
 
                 <StackLayout row="1" class="input-field">
-                    <Label text="Password"/>
+                    <Label text="Mot de passe"/>
                     <TextField id="password" class="input" text="{{ password }}"
                         secure="true" returnKeyType="{{ isLoggingIn ? 'done' : 'next' }}" />
                     <Label class="hr-light" />
@@ -61,7 +61,7 @@
 
             <GridLayout columns="1*, 1*, 1*" rows="auto, auto, auto" visibility="{{ !isLoggingIn ? 'visible' : 'collapse' }}">
 
-                <label row="0" colSpan="3" text="Choississez vos sports préféré"/>
+                <label row="0" colSpan="3" text="Choississez vos sports préférés"/>
                 <StackLayout row="1" col="0">
                     <CheckBox:CheckBox row="1" col="1" text="Football" id="myCheckboxFootball" />
                     <CheckBox:CheckBox row="1" col="2" text="Rugby" id="myCheckboxRugby"/>
@@ -82,7 +82,7 @@
 
             
 
-            <Button text="{{ isLoggingIn ? 'Connexion' : 'S incrire' }}" tap="{{ submit }}" isEnabled="{{ !processing }}"
+            <Button text="{{ isLoggingIn ? 'Connexion' : 'Inscription' }}" tap="{{ submit }}" isEnabled="{{ !processing }}"
                 class="btn btn-primary m-t-20" />
         </StackLayout>
 
@@ -90,7 +90,7 @@
 
         <Label class="login-label sign-up-label" tap="{{ toggleForm }}">
             <FormattedString>
-                <Span text="{{ isLoggingIn ? 'Nouveau sur SportMeet ?' : 'Retour au Login' }}" />
+                <Span text="{{ isLoggingIn ? 'Nouveau sur SportMeet ?' : 'Identification' }}" />
             </FormattedString>
         </Label>
     </FlexboxLayout>

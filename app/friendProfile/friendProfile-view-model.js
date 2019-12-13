@@ -16,7 +16,7 @@ let friendsViewModel = page => {
 viewModel.setFriend = args => {
     isFriend = true;
     var btn = args.object;
-    viewModel.set("Text", "Invitation envoyé");
+    viewModel.set("Text", "Invitation envoyée");
     btn.backgroundColor = "#A1E8AF";
 };
 

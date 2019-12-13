@@ -1,3 +1,8 @@
+.page {
+  align-items: center;
+  flex-direction: column;
+}
+
 .connexion-top {
   width: 100%;
   border-color: blueviolet;

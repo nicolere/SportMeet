@@ -1,3 +1,7 @@
+.page {
+  align-items: center;
+  flex-direction: column;
+}
 .connexion-top {
   width: 100%;
   border-color: blueviolet;
@@ -6,7 +10,6 @@
   background-color: #8e7cc3;
   float: top;
 }
-
 .title {
   margin-top: 20;
   width: 100%;
@@ -15,12 +18,10 @@
   font-size: 22;
   color: white;
 }
-
 .GridCenter {
   margin-left: 30;
   margin-top: 10;
 }
-
 .textCenter {
   margin-left: 30;
   margin-top: 22;

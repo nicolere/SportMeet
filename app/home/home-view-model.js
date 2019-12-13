@@ -5,7 +5,7 @@ const viewModel = new observableModule();
 
 let HViewModel = page => {
     viewModel.set("mainColor", "#1aa3ff");
-    viewModel.set("titre_page", "Carte des sport");
+    viewModel.set("titre_page", "Carte des sports");
     viewModel.set("violetColored", "#8e7cc3");
     viewModel.set("rugbyColor", "#21A179");
     viewModel.set("tennisColor","#EC7505");

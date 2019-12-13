@@ -9,7 +9,7 @@
 			<!-- Main Content -->
 			<AbsoluteLayout class="search-top">
 				<Label class="title" text="{{titre_page}}" />
-				<TextField type="search" class="searchBar" hint="Nom/Lieux/Événements" returnKeyType="done" />
+				<TextField type="search" class="searchBar" hint="Entrez nom/Lieux/Événements" returnKeyType="done" />
 			</AbsoluteLayout>
 			<GridLayout columns="auto, *, auto" rows="auto, 25" class="center">
 				<Label text="&#xf150;" tap="{{deconnexion}}" color="{{violetColored}}" android:style="font-size:30;margin:10" rowSpan="2" height="50" width="50" verticalAlignment="top" class="fas" />
@@ -46,22 +46,22 @@
 				<!-- Item 1 Navigation -->
 				<StackLayout class="navItem" tap="{{ goToMap }}">
 					<Label text="&#xf5a0;" color="{{ mainColor }}" android:style="font-size:25;margin-top:9" class="fas"/>
-					<Label text="Map" color="{{mainColor}}" android:style="margin-left:3" />
+					<Label text="Carte" color="{{mainColor}}" android:style="margin-left:3" />
 				</StackLayout>
 				<!-- Item 2 Navigation -->
 				<StackLayout class="navItem" tap="{{ goToNews }}">
 					<Label text="&#xf1ea;" android:style="font-size:25;margin-top:9" class="fas"/>
-					<Label text="News" android:style="margin-left:3" />
+					<Label text="Actu" android:style="margin-left:3" />
 				</StackLayout>
 				<!-- Item 3 Navigation -->
 				<StackLayout class="navItem" tap="{{ goToFriends }}">
 					<Label text="&#xf500;" android:style="font-size:25;margin-top:9" class="fas"/>
-					<Label text="Friends" android:style="margin-left:3"/>
+					<Label text="Amis" android:style="margin-left:3"/>
 				</StackLayout>
 				<!-- Item 4 Navigation -->
 				<StackLayout class="navItem" tap="{{ goToEvents }}">
 					<Label text="&#xf784;" android:style="font-size:25;margin-top:9" class="fas"/>
-					<Label text="Events" android:style="margin-left:3"/>
+					<Label text="Événements" android:style="margin-left:3"/>
 				</StackLayout>
 			</StackLayout>
 		</StackLayout>
