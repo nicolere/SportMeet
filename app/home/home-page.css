@@ -1,28 +1,32 @@
-.page {
+Page.page {
   align-items: center;
   flex-direction: column;
 }
 
-.form {
-  vertical-align: middle;
+.back {
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.connexion-top {
+.search-top {
   width: 100%;
   border-color: blueviolet;
   border-bottom-width: 1.5;
-  height: 75;
+  height: 70;
   background-color: #8e7cc3;
   float: top;
 }
 
-Textfield {
-  outline: none;
-  background-color: blue;
+.title {
+  width: 100%;
+  text-align: center;
+  font-size: 22;
+  color: white;
 }
 
-Textfield[type="search"] {
-  font-family: inherit;
+.searchBar {
+  margin-top: 25;
+  margin-left: 20;
 }
 
 Textfield[type="search"] {
@@ -52,60 +56,25 @@ Textfield[type="search"]:focus {
   box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
 }
 
-Textfield:-moz-placeholder {
-  color: #999;
-}
+Textfield:-moz-placeholder,
 Textfield::-webkit-input-placeholder {
   color: #999;
 }
-.title {
-  width: 100%;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 22;
-  color: white;
+
+.box-train {
+  opacity: 0.65;
+  border-radius: 10;
+  border-width:1;
+  border-color: black;
 }
 
-.searchBar {
-  margin-top: 20;
-  vertical-align: center;
-  width: 225;
-
-  border-radius: 36px;
+.box-train Label#text-sub{
+  margin-top:3;
+  margin-left:3;
 }
 
-.test {
-  width: 100%;
-  padding: 100;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 18;
-  color: white;
+.box-train Label#icon-sub{
+  margin-top:3;
+  margin-right:5;
 }
 
-.menu_deroulant {
-  float: left;
-  height: 50;
-  width: auto;
-}
-
-.petitimage {
-  position: absolute;
-  width: 10;
-  height: 10;
-}
-
-.page {
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.logo {
-  height: 100%;
-}
-
-.actionMerg {
-  margin-right: 50;
-  float: left;
-  align-items: left;
-}

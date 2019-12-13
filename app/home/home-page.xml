@@ -6,17 +6,44 @@
 
 	<DockLayout>
 			<!-- <FlexboxLayout dock="top" class="page" backgroundImage="~/images/carteGrenoble.png">
-				<AbsoluteLayout class="connexion-top">
-					<Label class="title" text="{{titre_page}}" />
-					<TextField id="confirmPassword" type="search" class="searchBar"
-					hint="Nom/Lieux/Événement" returnKeyType="done" />
-				</AbsoluteLayout>
 				<GridLayout columns="auto, *, auto" rows="auto, 25" class="center">
 					<Image src="~/images/deroulant.png" tap="deconnexion" rowSpan="2" height="50" width="50" margin="3" verticalAlignment="top"/>
 				</GridLayout>
 			</FlexboxLayout> -->
-		<StackLayout dock="top" height="90%" width="100%" style="">
-		<!-- Main Content -->
+		<StackLayout dock="top" height="90%" width="100%" class="back" backgroundImage="~/images/carteGrenoble.png">
+			<!-- Main Content -->
+			<AbsoluteLayout class="search-top">
+				<Label class="title" text="{{titre_page}}" />
+				<TextField type="search" class="searchBar" hint="Nom/Lieux/Événements" returnKeyType="done" />
+				<!-- <SearchBar class="searchBar" borderRadius="20" hint="Nom/Lieux/Événements" backgroundColor="white" /> -->
+			</AbsoluteLayout>
+			<GridLayout columns="auto, *, auto" rows="auto, 25" class="center">
+				<Label text="&#xf150;" tap="{{deconnexion}}" color="{{violetColored}}" android:style="font-size:30;margin:10" rowSpan="2" height="50" width="50" verticalAlignment="top" class="fas" />
+			</GridLayout>
+			<AbsoluteLayout width="340" height="370">
+				<Label text="&#xf041;" left="250" top="160" width="35" height="35" color="{{rugbyColor}}" android:style="font-size:30" tap="{{toggleText}}" class="fas" />
+				<Label text="Stade Jean Pêche" left="200" top="190" width="150" height="35"  color="black" />
+
+				<Label text="&#xf041;" left="170" top="270" width="35" height="35" color="{{tennisColor}}" android:style="font-size:30" tap="{{toggleText}}" class="fas" />
+				<Label text="Cours Ten1" left="160" top="300" width="100" height="35"  color="black" />
+
+				<Label text="&#xf041;" left="65" top="270" width="35" height="35" color="{{tennisColor}}" android:style="font-size:30" tap="{{toggleText}}" class="fas" />
+				<Label text="Cours Ten2" left="45" top="300" width="100" height="35"  color="black" />
+
+				<Label text="&#xf041;" left="170" top="15" width="35" height="35" color="{{skateColor}}" android:style="font-size:30" class="fas" />
+				<Label text="El quare" left="165" top="45" width="100" height="35"  color="black" />
+
+				<StackLayout class="box-train" orientation="vertical" left="25" top="175" width="180" height="80" backgroundColor="white" visibility="{{ showBox ? 'visible' : 'collapsed'}}">
+					<GridLayout columns="*,2*" rows="*,2*" orientation="horizontal" width="180" height="80">
+						<Label id="text-sub" col="0" colSpan="2" row="0" text="18h-20h: Entrainement sportif" width="150" height="20" horizontalAlignment="left" />
+						<Label id="icon-sub" col="2" row="0" text="&#xf328;" color="{{violetColored}}" android:style="font-size:20" class="fas" horizontalAlignment="right" />
+
+						<Label id="text-sub" col="0" colSpan="2" row="1" text="18h-20h: Entrainement amateur" width="150" horizontalAlignment="left" />
+						<Label id="icon-sub" col="2" row="1" text="&#xf328;" color="{{violetColored}}" android:style="font-size:20" class="fas" horizontalAlignment="right" />
+
+					</GridLayout>
+				</StackLayout>
+			</AbsoluteLayout>
 		</StackLayout>
 
 		<!-- Barre de navigation -->

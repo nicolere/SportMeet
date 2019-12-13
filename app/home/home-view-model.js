@@ -1,14 +1,24 @@
 const observableModule = require("tns-core-modules/data/observable").Observable;
 const topmost = require("tns-core-modules/ui/frame").topmost;
-const HtmlView = require("tns-core-modules/ui/html-view").HtmlView;
 
 const viewModel = new observableModule();
 
 let HViewModel = page => {
     viewModel.set("mainColor", "#1aa3ff");
-    viewModel.set("titre_page", "Carte du sport");
+    viewModel.set("titre_page", "Carte des sport");
+    viewModel.set("violetColored", "#8e7cc3");
+    viewModel.set("rugbyColor", "#21A179");
+    viewModel.set("tennisColor","#EC7505");
+    viewModel.set("skateColor","#6B818C");
+
+    viewModel.set("boxTrainColor", "#B0D0D3");
+    viewModel.set("showBox", true);
     return viewModel;
 };
+
+viewModel.toggleText = args => {
+    viewModel.set("showBox", !viewModel.get("showBox"));
+}
 
 viewModel.goToMenu = args => {
     // console.log("Navigate vers Menu");
