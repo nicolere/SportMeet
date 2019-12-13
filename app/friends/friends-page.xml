@@ -11,7 +11,7 @@
 		<FlexboxLayout class="page">
 			<AbsoluteLayout class ="connexion-top">
 				<Label class="title" text="{{Title}}" />
-				<TextField id="searchFriend" type="search" class="searchBar" text="Nom/Prénom" returnKeyType="done" />
+				<TextField id="searchFriend" type="search" class="searchBar" hint="Nom/Prénom" returnKeyType="done" />
 			</AbsoluteLayout>
 
 			<StackLayout orientation="vertical" width="100%" height="auto" margin-top="75px">

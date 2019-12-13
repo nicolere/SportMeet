@@ -9,7 +9,7 @@
 		<FlexboxLayout class="page">
 			<AbsoluteLayout class ="connexion-top">
 				<Label class="title" text="Événements" />
-				<TextField id="confirmPassword" type="search" class="searchBar" text="{{ confirmPassword }}"
+				<TextField type="search" class="searchBar" text="{{ confirmPassword }}"
 				hint="Événement" returnKeyType="done" />
 			</AbsoluteLayout>
 
@@ -18,7 +18,7 @@
 					<Image src="~/images/football.png" tap="{{goToTheEvent}}" width="50"/>
 						<StackLayout orientation="vertical" width="70%" margin-top="75px">
 							<Label class="GridCenter" tap="{{goToTheEvent}}" text="13 foulée parisienne"/>
-							<label class="Bold" text="le 13 décembre 2019"/>
+							<label class="Bold" tap="{{goToTheEvent}}" text="le 13 décembre 2019"/>
 						</StackLayout>
 					<Image src="~/images/deconnexion.png" height="50" width="50"/>
 				</StackLayout>
@@ -30,27 +30,27 @@
 							<Label class="GridCenter" text="La date"/>
 							<label class="Bold" text="Le titre"/>
 						</StackLayout>
-					<Image src="~/images/deconnexion.png" tap="{{deconnexion}}" height="50" width="50"/>
+					<Image src="~/images/deconnexion.png" height="50" width="50"/>
 				</StackLayout>
 				<StackLayout class="hr-dark m-5"></StackLayout>
 
 				<StackLayout orientation="horizontal" width="100%">
-					<Image src="~/images/football.png" tap="{{deconnexion}}" width="50"/>
+					<Image src="~/images/football.png" width="50"/>
 						<StackLayout orientation="vertical" width="70%" height="auto" margin-top="75px">
 							<Label class="GridCenter" text="La date"/>
 							<label class="Bold" text="Le titre"/>
 						</StackLayout>
-					<Image src="~/images/deconnexion.png" tap="{{deconnexion}}" height="50" width="50"/>
+					<Image src="~/images/deconnexion.png" height="50" width="50"/>
 				</StackLayout>
 				<StackLayout class="hr-dark m-5"></StackLayout>
 
 				<StackLayout orientation="horizontal" width="100%">
-					<Image src="~/images/football.png" tap="{{deconnexion}}" width="50"/>
+					<Image src="~/images/football.png" width="50"/>
 						<StackLayout orientation="vertical" width="70%" height="auto" margin-top="75px">
 							<Label class="GridCenter" text="La date"/>
 							<label class="Bold" text="Le titre"/>
 						</StackLayout>
-					<Image src="~/images/deconnexion.png" tap="{{deconnexion}}" height="50" width="50"/>
+					<Image src="~/images/deconnexion.png" height="50" width="50"/>
 				</StackLayout>
 				<StackLayout class="hr-dark m-5"></StackLayout>
 			</StackLayout>

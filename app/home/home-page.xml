@@ -5,17 +5,11 @@
 	</ActionBar>
 
 	<DockLayout>
-			<!-- <FlexboxLayout dock="top" class="page" backgroundImage="~/images/carteGrenoble.png">
-				<GridLayout columns="auto, *, auto" rows="auto, 25" class="center">
-					<Image src="~/images/deroulant.png" tap="deconnexion" rowSpan="2" height="50" width="50" margin="3" verticalAlignment="top"/>
-				</GridLayout>
-			</FlexboxLayout> -->
 		<StackLayout dock="top" height="90%" width="100%" class="back" backgroundImage="~/images/carteGrenoble.png">
 			<!-- Main Content -->
 			<AbsoluteLayout class="search-top">
 				<Label class="title" text="{{titre_page}}" />
 				<TextField type="search" class="searchBar" hint="Nom/Lieux/Événements" returnKeyType="done" />
-				<!-- <SearchBar class="searchBar" borderRadius="20" hint="Nom/Lieux/Événements" backgroundColor="white" /> -->
 			</AbsoluteLayout>
 			<GridLayout columns="auto, *, auto" rows="auto, 25" class="center">
 				<Label text="&#xf150;" tap="{{deconnexion}}" color="{{violetColored}}" android:style="font-size:30;margin:10" rowSpan="2" height="50" width="50" verticalAlignment="top" class="fas" />

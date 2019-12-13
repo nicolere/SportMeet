@@ -60,9 +60,14 @@ Textfield:-moz-placeholder {
 Textfield::-webkit-input-placeholder {
   color: #999;
 }
+
+.banner {
+  border-color: blueviolet;
+  border-bottom-width: 1.5;
+}
+
 .title {
   width: 100%;
-  border-radius: 50%;
   text-align: center;
   font-size: 22;
   color: white;

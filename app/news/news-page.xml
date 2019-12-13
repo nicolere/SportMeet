@@ -4,31 +4,48 @@
 		<ActionItem tap="{{ deconnexion }}" text="Déconnexion" android.position="popup" />
 	</ActionBar>
 
-	<!-- <FlexboxLayout class="page">
-        <AbsoluteLayout class ="connexion-top">
-        	<Label class="title" text="News" />
-			<TextField id="confirmPassword" type="search" class="searchBar" text="{{ confirmPassword }}"
-			hint="Nom/Lieux/Événement" returnKeyType="done" />
-		</AbsoluteLayout>
-		<GridLayout columns="auto, *, auto" rows="auto, 25" class="center">
-		</GridLayout>
-
-		
-	</FlexboxLayout> -->
 	<DockLayout>
-			<!-- <FlexboxLayout dock="top" class="page" backgroundImage="~/images/carteGrenoble.png">
-				<AbsoluteLayout class="connexion-top">
-					<Label class="title" text="{{titre_page}}" />
-					<TextField id="confirmPassword" type="search" class="searchBar"
-					hint="Nom/Lieux/Événement" returnKeyType="done" />
-				</AbsoluteLayout>
-				<GridLayout columns="auto, *, auto" rows="auto, 25" class="center">
-					<Image src="~/images/deroulant.png" tap="deconnexion" rowSpan="2" height="50" width="50" margin="3" verticalAlignment="top"/>
-				</GridLayout>
-			</FlexboxLayout> -->
-		<StackLayout dock="top" height="90%" width="100%" style="">
-		<!-- Main content -->
-		</StackLayout>
+		<FlexboxLayout flexDirection="column" alignItems="stretch" dock="top" height="90%" width="100%" style="">
+			<!-- Main content -->
+			<!--Titre de la page-->
+			<StackLayout class="banner" backgroundColor="#8e7cc3" height="50" width="100%">
+				<Label class="title" text="Infos" textAlignment="center" fontAttributes="Bold" fontSize="30"></Label>
+				<StackLayout class="hr-dark" width="200"></StackLayout>
+			</StackLayout>
+
+			<!--Premier article-->
+			<StackLayout orientation="horizontal" marginTop="20">
+				<Image src="~/images/staps.jpg" width="50" class="img-circle" ></Image>
+				<StackLayout>
+					<Label class="h4" text="23-24 Dec - NATATION - OPEN DES ALPES 2019" textWrap="true"></Label>
+					<Label class="body" text="La plus grande compétition régionale de natation rassemblant les meilleurs nageurs français et quelque internationaux..." textWrap="true" marginLeft="10"></Label>
+				</StackLayout>
+			</StackLayout>
+			<StackLayout marginTop="5">
+				<Image src="~/images/natation.png" width="200" class="img-circle" ></Image>
+			</StackLayout>
+
+			<!--Ligne séparateur-->
+			<StackLayout class="hr-light" marginTop="5"></StackLayout>
+
+			<!--Deuxième article-->
+			<StackLayout orientation="horizontal" marginTop="10">
+				<Image src="~/images/logoGre.png" width="50" class="img-circle" ></Image>
+				<StackLayout>
+					<Label class="h3" text="Sport et Quartiers" textWrap="true"></Label>
+					<Label class="body" text="Le service Sport et quartiers propose une offre sportive, éducative et pédagogique à l'ensemble des enfants et jeunes jusqu’à 25 ans." textWrap="true" marginLeft="10"></Label>
+				</StackLayout>
+			</StackLayout>
+			<StackLayout marginTop="5">
+				<Image src="~/images/foot.jpg" width="200" class="img-circle" ></Image>
+			</StackLayout>
+
+			<!--Flêche fin de page-->
+			<StackLayout marginTop="10">
+				<Image src="~/images/arrow.png" width="50" class="img-circle"></Image>
+			</StackLayout>
+
+		</FlexboxLayout>
 
 		<!-- Barre de navigation -->
 		<StackLayout dock="bottom" height="10%" style="border-color:#E4E4E4;border-width:1;background:#fff;">
