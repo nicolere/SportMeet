@@ -12,12 +12,17 @@ let HViewModel = page => {
     viewModel.set("skateColor","#6B818C");
 
     viewModel.set("boxTrainColor", "#B0D0D3");
-    viewModel.set("showBox", true);
+    viewModel.set("showBox", false);
+    viewModel.set("iconSubs", false);
     return viewModel;
 };
 
 viewModel.toggleText = args => {
     viewModel.set("showBox", !viewModel.get("showBox"));
+}
+
+viewModel.toggleIcon = args => {
+    viewModel.set("iconSubs", !viewModel.get("iconSubs"));
 }
 
 viewModel.goToMenu = args => {

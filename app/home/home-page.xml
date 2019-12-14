@@ -12,7 +12,7 @@
 				<TextField type="search" class="searchBar" hint="Entrez nom/Lieux/Événements" returnKeyType="done" />
 			</AbsoluteLayout>
 			<GridLayout columns="auto, *, auto" rows="auto, 25" class="center">
-				<Label text="&#xf150;" tap="{{deconnexion}}" color="{{violetColored}}" android:style="font-size:30;margin:10" rowSpan="2" height="50" width="50" verticalAlignment="top" class="fas" />
+				<Label text="&#xf150;" color="{{violetColored}}" android:style="font-size:30;margin:10" rowSpan="2" height="50" width="50" verticalAlignment="top" class="fas" />
 			</GridLayout>
 			<AbsoluteLayout width="340" height="370">
 				<Label text="&#xf041;" left="250" top="160" width="35" height="35" color="{{rugbyColor}}" android:style="font-size:30" tap="{{toggleText}}" class="fas" />
@@ -27,10 +27,10 @@
 				<Label text="&#xf041;" left="170" top="15" width="35" height="35" color="{{skateColor}}" android:style="font-size:30" class="fas" />
 				<Label text="El quare" left="165" top="45" width="100" height="35"  color="black" />
 
-				<StackLayout class="box-train" orientation="vertical" left="25" top="175" width="180" height="80" backgroundColor="white" visibility="{{ showBox ? 'visible' : 'collapsed'}}">
+				<StackLayout class="box-train" orientation="vertical" left="25" top="175" width="180" height="80" visibility="{{ showBox ? 'visible' : 'collapsed'}}">
 					<GridLayout columns="*,2*" rows="*,2*" orientation="horizontal" width="180" height="80">
 						<Label id="text-sub" col="0" colSpan="2" row="0" text="18h-20h: Entrainement sportif" width="150" height="20" horizontalAlignment="left" />
-						<Label id="icon-sub" col="2" row="0" text="&#xf328;" color="{{violetColored}}" android:style="font-size:20" class="fas" horizontalAlignment="right" />
+						<Label id="icon-sub" col="2" row="0" tap="{{toggleIcon}}" text="{{iconSubs ? '&#xf00c;': '&#xf328;'}}" color="{{violetColored}}" android:style="font-size:20" class="fas" horizontalAlignment="right" />
 
 						<Label id="text-sub" col="0" colSpan="2" row="1" text="18h-20h: Entrainement amateur" width="150" horizontalAlignment="left" />
 						<Label id="icon-sub" col="2" row="1" text="&#xf328;" color="{{violetColored}}" android:style="font-size:20" class="fas" horizontalAlignment="right" />
