@@ -5,7 +5,6 @@ const viewModel = new observableModule();
 
 let theEventViewModel = page => {
     viewModel.set("eventsColor", "#1aa3ff");
-    viewModel.set("titreView", "TheEvent");
 
     return viewModel;
 };
