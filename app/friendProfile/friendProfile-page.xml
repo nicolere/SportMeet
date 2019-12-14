@@ -55,8 +55,8 @@
 			<StackLayout orientation="horizontal">
 				<!-- Item 1 Navigation -->
 				<StackLayout class="navItem" tap="{{ goToMap }}">
-					<Label text="&#xf5a0;" color="{{ mainColor }}" android:style="font-size:25;margin-top:9" class="fas"/>
-					<Label text="Carte" color="{{mainColor}}" android:style="margin-left:3" />
+					<Label text="&#xf5a0;" android:style="font-size:25;margin-top:9" class="fas"/>
+					<Label text="Carte" android:style="margin-left:3" />
 				</StackLayout>
 				<!-- Item 2 Navigation -->
 				<StackLayout class="navItem" tap="{{ goToNews }}">
@@ -65,8 +65,8 @@
 				</StackLayout>
 				<!-- Item 3 Navigation -->
 				<StackLayout class="navItem" tap="{{ goToFriends }}">
-					<Label text="&#xf500;" android:style="font-size:25;margin-top:9" class="fas"/>
-					<Label text="Amis" android:style="margin-left:3"/>
+					<Label text="&#xf500;" color="{{friendsColor}}" android:style="font-size:25;margin-top:9" class="fas"/>
+					<Label text="Amis" color="{{friendsColor}}" android:style="margin-left:3"/>
 				</StackLayout>
 				<!-- Item 4 Navigation -->
 				<StackLayout class="navItem" tap="{{ goToEvents }}">
